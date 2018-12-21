@@ -37,8 +37,8 @@
 
     <scm>
         <connection>scm:git:https://github.com/vishi9/sample-aem.git</connection>
-        <developerConnection>https://github.com/vishi9/sample-aem</developerConnection>
-        <url>scm:git:https://github.com/vishi9/sample-aem.git</url>
+        <developerConnection>scm:git:https://github.com/vishi9/sample-aem.git</developerConnection>
+        <url>https://github.com/vishi9/sample-aem</url>
 	    <tag>HEAD</tag>
     </scm>
     <!-- ====================================================================== -->
