@@ -44,7 +44,7 @@
         <connection>scm:git:https://github.com/vishi9/sample-aem.git</connection>
         <developerConnection>scm:git:https://github.com/vishi9/sample-aem.git</developerConnection>
         <url>https://github.com/vishi9/sample-aem</url>
-	    <tag>sample-0.0.1</tag>
+	<!--    <tag>sample-0.0.1</tag> -->
     </scm>
     <build>
         <plugins>
