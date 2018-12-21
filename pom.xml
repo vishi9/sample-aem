@@ -40,6 +40,12 @@
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
     </properties>
+	<scm>
+        <connection>scm:git:https://github.com/vishi9/sample-aem.git</connection>
+        <developerConnection>https://github.com/vishi9/sample-aem</developerConnection>
+        <url>scm:git:https://github.com/vishi9/sample-aem.git</url>
+	    <tag>HEAD</tag>
+    </scm>
     <build>
         <plugins>
             <!-- Maven Release Plugin -->
