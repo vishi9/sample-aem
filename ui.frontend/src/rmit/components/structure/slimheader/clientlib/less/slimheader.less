@@ -1,0 +1,44 @@
+@RMIT-Navy: #000054;
+@white: #ffffff;
+@RMIT-Red: #e60028;
+@font-family-museo-500: "Museo500";
+	.slimheader-wrapper {
+		 position: relative;
+		 min-height: 85px;
+	}
+
+	.slimheader-content {
+		 width: 70%;
+		 position: relative;
+		 height: auto;
+		 h1.slimheader-content__heading {
+			 color: @RMIT-Navy;
+			 font-family: @font-family-museo-500;
+			 font-size: 50px;
+			 line-height: 50px;
+		}
+		 h1.slimheader-content__heading:before {
+				position: absolute;
+				top: -15px;
+				left: 0;
+				width: 28px;
+				height: 4px;
+				background: @RMIT-Red;
+				display: inline-block;
+				content: '';
+		}
+
+	}
+
+ 	@media only screen and (max-width: 768px) {
+        .slimheader-content {
+            h1.slimheader-content__heading {
+                 font-size: 30px;
+                 line-height:35px;
+            	 width:90%;
+            }
+        }
+	}
+
+	
+

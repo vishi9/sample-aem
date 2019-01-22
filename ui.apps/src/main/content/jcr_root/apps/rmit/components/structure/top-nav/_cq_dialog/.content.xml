@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="RMIT Top Nav"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem_cmp_languagenavigation_v1">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <logo
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Logo"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <assetPicker
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="commerce/gui/components/common/assetpicker"
+                                                fieldDescription="Ability to select Logo"
+                                                fieldLabel="Asset Picker"
+                                                name="./assetPicker"
+                                                rootPath="/content/dam/"/>
+                                            <assetLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldDescription="Specify url for the Logo"
+                                                fieldLabel="Asset Link"
+                                                name="./assetLink"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </logo>
+                    <search
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Search"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <searchheading
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Search Heading"
+                                                name="./searchHeading"/>
+                                            <searchlink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                fieldLabel="Search Link"
+                                                name="./searchLink"
+                                                rootPath="/content"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </search>
+                    <menu
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Menu"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <tablist
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Tab List">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                    acs-commons-nested=""
+                                                    name="./tabList">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <tabheading
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldDescription="Multi field ( Country should be added first)"
+                                                                    fieldLabel="Tab Heading"
+                                                                    name="./tabHeading"
+                                                                    required="{Boolean}true"/>
+                                                                <taburl
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                    fieldLabel="Tab URL"
+                                                                    name="./tabUrl"
+                                                                    rootPath="/content"/>
+                                                                <tabhighlight
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                                    fieldDescription="Select Tab Highlight option"
+                                                                    fieldLabel="Tab Highlight"
+                                                                    name="./tabHighlight">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <yes
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            text="Yes"
+                                                                            value="yes"/>
+                                                                        <no
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            selected="{Boolean}true"
+                                                                            text="No"
+                                                                            value="no"/>
+                                                                    </items>
+                                                                </tabhighlight>
+                                                                <menulist
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                                    composite="{Boolean}true"
+                                                                    fieldLabel="Menu List">
+                                                                    <field
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                                        acs-commons-nested=""
+                                                                        name="./menuList">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <column
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                <items jcr:primaryType="nt:unstructured">
+                                                                                    <menuitemlabel
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                        fieldDescription="Multi field"
+                                                                                        fieldLabel="Menu Item label"
+                                                                                        name="./menuItemLabel"/>
+                                                                                    <menuitemlink
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                                                                        fieldLabel="Menu Item URL"
+                                                                                        name="./menuItemLink"
+                                                                                        rootPath="/content"/>
+                                                                                </items>
+                                                                            </column>
+                                                                        </items>
+                                                                    </field>
+                                                                </menulist>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </tablist>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </menu>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

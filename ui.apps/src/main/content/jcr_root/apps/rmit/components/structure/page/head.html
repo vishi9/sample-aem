@@ -1,0 +1,61 @@
+<!--/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2016 Adobe Systems Incorporated
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/-->
+<template data-sly-template.head="${ @ page }"
+          data-sly-use.headlibRenderer="headlibs.html"
+          data-sly-use.headResources="head.resources.html">
+    <meta charset="UTF-8">
+    <title>${page.title}</title>
+    <meta data-sly-test.keywords="${page.keywords}" name="keywords" content="${keywords}"/>
+    <meta data-sly-test.description="${properties['jcr:description']}" name="description" content="${description}"/>
+    <meta data-sly-test.templateName="${page.templateName}" name="template" content="${templateName}"/>
+
+    <!-- Tags...start -->
+    <sly data-sly-use.basePage="${'com.adobe.aem.rmit.core.models.BasePage'}">
+	<title>${basePage.componentTitle} - RMIT University</title>
+	<link rel="canonical" href="${basePage.canonicalUrl}" />
+	<link data-sly-test.ampcanonicalUrl="${properties['ampcanonicalUrl']}" rel="amphtml" href="${properties['ampcanonicalUrl']}" />
+	<link rel="alternate"  hreflang="${basePage.googleLanguage}" href="${basePage.hreflangTagging}" />
+
+	<!-- for Google -->
+	<meta name="title" content="${basePage.googleTitle}" />
+	<meta name="description" content="${basePage.googleDescription}" />
+	<meta name="language" content="${basePage.googleLanguage}" />
+	<meta name="author" content="${basePage.googleAuthor}" />
+	<meta name="copyright" content="${basePage.googleCopyright}" />
+	<!-- for Facebook -->
+	<meta property="og:title" content="${basePage.facebookOgTitle}" />
+	<meta property="og:type" content="${basePage.facebookOgType}" />
+	<meta property="og:image" content="${basePage.facebookOgImage}" />
+	<meta property="og:url" content="${basePage.facebookOgUrl}" />
+	<meta property="og:description" content="${basePage.facebookOgDescription}" />
+	<!-- for Twitter -->
+	<meta name="twitter:card" content="${basePage.twitterCard}" />
+	<meta name="twitter:title" content="${basePage.twitterTitle}" />
+	<meta name="twitter:description" content="${basePage.twitterDescription}" />
+	<meta name="twitter:image" content="${basePage.twitterImage}" />
+</sly>
+    <!-- end -->
+    
+    <sly data-sly-include="head.socialmedia.html"></sly>
+    <sly data-sly-include="customheaderlibs.html"></sly>
+    <sly data-sly-call="${headlibRenderer.headlibs @
+                                designPath         = page.designPath,
+                                staticDesignPath   = page.staticDesignPath,
+                                clientLibCategories = page.clientLibCategories}"></sly>
+    <sly data-sly-test.appResourcesPath=${page.appResourcesPath} data-sly-call="${headResources.favicons @ path = appResourcesPath}"></sly>
+    <!-- DTM SCRIPT DO NOT REMOVE -->
+    <script src="//assets.adobedtm.com/launch-EN41e851ff1b9b4fa8b6f4d970d7f8038c.min.js" async></script>
+</template>

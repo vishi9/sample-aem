@@ -1,0 +1,112 @@
+@rmit-navy: #000054;
+@rmit-red: #E60028;
+@rmit-grey: #f5f5f5;
+@rmit-black:#333333;
+@rmit-link-hover:#3a3a3a;
+@font-family-museo-500: "Museo500";
+@font-family-helvetica-neue: "Helvetica Neue", sans-serif;
+
+.museo-font {
+    font-family: @font-family-museo-500;
+    color: @rmit-black;
+    font-size:36px;
+    line-height:40px;
+}
+div.chevronCustomList {
+
+    ul, ol {
+		list-style: none;
+		color: @rmit-black;
+        font-family: @font-family-museo-500;
+        line-height:22px;
+	}
+
+	li:before {
+		border-style: solid;
+		border-width: 0.15em 0.15em 0 0;
+		content: '';
+		display: inline-block;
+		height: 7.5px;
+		left: -0.5em;
+		position: relative;
+		top: 7px;
+		transform: rotate(45deg);
+		vertical-align: top;
+		width: 7.5px;
+		color: @rmit-red;
+	}
+}
+div.cmp-text {
+    color: @rmit-black;
+    margin: 10px 0;
+    p, span, div {
+    color: @rmit-black;
+    
+    }
+    
+	a {
+		text-decoration: underline;
+		color: @rmit-black;
+	}
+	ul, ol {
+		color: @rmit-black;
+	}
+	li {
+		position: relative;
+		color: @rmit-black;
+	}
+	li a {
+		color: @rmit-black;
+		text-decoration: underline;
+	}
+	ul li > a:hover,  ul li > a:focus , ol li > a:hover,  ol li > a:focus,  p > a:hover,  p > a:focus {
+		text-decoration: underline;
+		color: @rmit-link-hover;
+		opacity:0.5;
+	}
+
+     blockquote {
+        background-color: @rmit-grey;
+        border-left: 0px solid #ccc;
+        font-family: @font-family-museo-500;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: 0.1px;
+        position:relative;
+        padding: 44px 10px 50px 25px;
+    }
+    blockquote:before {
+        content: "\201C";
+        color: @rmit-red;
+        position:absolute;
+        font-size:36px;
+        left:4px;
+        margin-top: -2px;
+    }
+    blockquote:after {
+        content: "\201D";
+        color: @rmit-red;
+        font-size:36px;
+        position: relative;
+        padding-left: 5px;
+        top: 5px;
+    }
+    h2{
+        font-size: 22px;
+        font-family:@font-family-helvetica-neue;
+        line-height: 30px;
+        font-weight: 600;
+    }
+     h3{
+         font-size:20px;
+         font-family:@font-family-helvetica-neue;
+         line-height: 30px;
+         font-weight: 600;
+    }
+    h4{
+         font-size:16px;
+         font-family:@font-family-helvetica-neue;
+         line-height: 24px;
+         font-weight: 600;
+    }
+}

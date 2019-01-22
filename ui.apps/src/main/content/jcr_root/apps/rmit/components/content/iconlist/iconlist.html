@@ -1,0 +1,40 @@
+<sly data-sly-use.list="com.adobe.aem.rmit.core.models.IconListSlingModel">
+   <div data-sly-test="${wcmmode.edit && !list.heading }" data-sly-unwrap>
+      Edit Icon List Component
+   </div>
+   <div class="${list.isFullwidth?'iconlist--full-width':'aem-Grid aem-Grid--12 aem-GridColumn--default--12'}">
+      <div class="iconlist__wrapper">
+         <div class="iconlist aem-Grid aem-Grid--12 aem-GridColumn--default--12 aem-GridColumn  root">
+            <div class="iconListHeading" data-sly-test="${list.heading}">${list.heading}</div>
+            <sly data-sly-test="${list.iconList}">
+               <div class="row ">
+                  <sly data-sly-test="${list.layout == '4-Column'}">
+                     <div data-sly-list.listItems="${list.iconList}">
+                        <div data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.linkUrl}" data-sly-unwrap >
+                           <div class="col-md-3 col-sm-6 col-xs-12 pb-20">
+                              <div class="row">
+                                 <div class="col-md-1 col-sm-1 col-xs-1"><i class="${listItems.icon}" aria-hidden="true"></i></div>
+                                 <div class="col-md-10 col-sm-10 col-xs-10"><a  href="${link.mappedUrl}" data-analytics-type="iconlink" data-analytics-value="${listItems.linkLabel}">${listItems.linkLabel}</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </sly>
+                  <sly data-sly-test="${list.layout == '3-Column'}">
+                     <div data-sly-list.listItems="${list.iconList}">
+                        <div data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.linkUrl}" data-sly-unwrap >
+                           <div class="col-md-4 col-xs-12 pb-20">
+                              <div class="row">
+                                 <div class="col-md-1 col-sm-1 col-xs-1"><i class="${listItems.icon}" aria-hidden="true"></i></div>
+                                 <div class="col-md-10 col-sm-10 col-xs-10"><a  href="${link.mappedUrl}" data-analytics-type="iconlink" data-analytics-value="${listItems.linkLabel}">${listItems.linkLabel}</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </sly>
+               </div>
+            </sly>
+         </div>
+      </div>
+   </div>
+</sly>

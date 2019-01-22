@@ -1,0 +1,157 @@
+@RMIT-Gray: #f5f5f5;
+@RMIT-White: #fff;
+@RMIT-Black: #333333;
+@RMIT-Navy: #000054;
+@RMIT-WarmGray: rgba( 151,151,151,.5);
+@peacockBlue: #0078ff;
+@darkgrey: #333333;
+@rmit-white: #ffffff;
+@rmit-dark-blue: #070758;
+@font-family-museo-500: "Museo500",serif;
+ @font-family-helvetica-neue: "Helvetica Neue", sans-serif;
+.primary-nav {
+    position: relative;
+    /*min-height: 75px;*/
+    nav {
+        position: relative;
+    }
+    .primary-navbar {
+        position: relative;
+        background: @RMIT-Gray;
+        display: block;
+        text-align: center;
+        width: 100%;
+        height: 75px;
+        ul span.col-1 {
+            text-align: left;
+            display: block;
+            padding-top: 40px;
+            width: 65%;
+            left: 2%;
+            position: absolute;
+            min-height:320px;
+        }
+        ul span a {
+            font-family: @font-family-helvetica-neue;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: @darkgrey;
+            text-decoration: none;
+        }
+        ul span a:hover {
+            text-decoration: underline;
+        }
+        ul span a i {
+            font-size: 10px;
+            font-weight: normal;
+            padding-top: 6px;
+            padding-right: 5px;
+        }
+        li {
+            display: inline-block;
+            list-style: none;
+        }
+        a.dropdown-menu-primary__link {
+            background: @RMIT-Gray;
+            color: @RMIT-Navy;
+            display: inline-block;
+            line-height: 30px;
+            padding: 22px 30px;
+            text-decoration: none;
+            font-size: 24px;
+            font-family: @font-family-museo-500;
+            font-weight: normal;
+        }
+        a.dropdown-menu-primary__link:hover, a.dropdown-menu-primary__link.active, a.dropdown-menu-primary__link:focus, a.dropdown-menu-primary__link:active, .dropdown-menu-primary.active a.dropdown-menu-primary__link {
+            background: @RMIT-White;
+            color: @RMIT-Navy;
+            text-decoration: underline;
+        }
+        .dropdown-menu-primary.active a.no-links {
+            background: @RMIT-White;
+            color: @RMIT-Navy;
+            text-decoration: none!important;
+        }
+        .dropdown-menu-primary {
+            .dropdown-inside {
+                background: @RMIT-White;
+                color: @RMIT-Black;
+                border-top: none;
+                display: none;
+                left: 0;
+                top: 74px;
+                overflow: hidden;
+                padding: 10px 0;
+                position: absolute;
+                z-index: 100;
+                min-height: 298px;
+                li {
+                    float: left;
+                    vartical-align: top;
+                }
+                .dropdown-links {
+                    li a {
+                        background: none;
+                        color: @RMIT-Black;
+                        text-align: left;
+                        text-decoration: none;
+                        padding: 8px 30px;
+                        height: auto;
+                        display: flex;
+                        border-radius: 5px;
+                        z-index: 100;
+                         width: 100%;
+                    }
+                    li a:hover, li a:focus {
+                        color: @RMIT-Black;
+                        z-index: 100;
+                        background: @RMIT-Black;
+                        color: @RMIT-White;
+                        width: 100%;
+                        padding: 8px 30px;
+                        height: auto;
+                        border-radius: 3px;
+                    }
+                }
+            }
+            &.active {
+                border-right: 1px solid @RMIT-WarmGray;
+                border-left: 1px solid @RMIT-WarmGray;
+            }
+        }
+    }
+    .promo-wrap {
+        display: block;
+        height: auto;
+        z-index: 100;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 32%;
+
+    }
+    .nav-wraper {
+        background: @RMIT-Gray;
+        width: 100%;
+        margin: 0;
+        height: 75px;
+    }
+
+      .aem-Grid.aem-Grid--12.aem-Grid--default--12 {
+      width:auto!important;
+      text-align:left;
+    }
+    
+    .promo-box img{
+        height:150px!important;
+    }
+}
+.hidden-section{
+    display:none;
+} 
+
+

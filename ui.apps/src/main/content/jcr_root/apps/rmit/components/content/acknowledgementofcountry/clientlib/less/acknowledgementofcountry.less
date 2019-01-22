@@ -1,0 +1,104 @@
+@rmit-navy: #000054;
+@font-family-museo-500: "Museo500", serif;
+@font-family-helvetica-neue: "Helvetica Neue", sans-serif;
+@background-color-whitesmoke: whitesmoke;
+@rmit-black: #333333;
+
+
+.country-acknowledgement {
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+	.title {
+		padding: 5px 0;
+		p {
+			font-size: 28px;
+			font-family: @font-family-museo-500;
+			margin: 0;
+			line-height: 1.21;
+			color: @rmit-navy;
+		}
+	}
+	.description {
+		padding: 5px 0;
+		p {
+			font-size: 16px;
+			line-height: 1.61;
+			font-family: @font-family-helvetica-neue;
+			color: @rmit-black;
+		}
+	}
+	a.more {
+		padding: 5px 0;
+		color: @rmit-navy;
+		position: relative;
+		font-family: @font-family-museo-500;
+	}
+	.flags {
+		padding: 5px 0;
+		.grunticon-ack-flag {
+			height: 30px;
+			margin-top: 30px;
+		}
+		.flag-1 {
+			padding-right: 5px;
+		}
+		
+	}
+	.more {
+		font-size: 16px;
+		i {
+			padding-right: 3px;
+		}
+		margin-bottom: 30px;
+	}
+}
+
+
+.acknowledgementofcountry {
+	margin: ~"0px calc((100vw - 100%) / -2)";
+    width: 100vw !important;
+}
+
+.acknowledgementbackimage {
+	display: inline-block;
+	height: 20.5rem;
+	position: absolute;
+	background-size: cover;
+	right: 0;
+}
+.country-acknowlegement__wrapper {
+	background-color: @background-color-whitesmoke;
+    margin-top: 80px;
+}
+@media (min-width: 767px) {
+	.country-acknowledgement {
+		height: 328px;
+	}
+}
+@media (max-width: 766px) {
+	.acknowledgementbackimage {
+		display: none;
+	}
+
+	.country-acknowledgement{
+
+		.title {
+			p {
+				font-size: 18px;
+				line-height: 1.21;
+			}
+		}
+		.description {
+			p {
+				font-size: 14px;
+				line-height: 1.71;
+			}
+		}
+	}
+}

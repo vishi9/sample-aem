@@ -1,0 +1,3 @@
+#base=src/js
+
+slick.js

@@ -1,0 +1,83 @@
+<div data-sly-test="${wcmmode.edit && !primaryMenu.menuHeading}" data-sly-unwrap>
+      Edit Primary Nav Component
+</div>
+<sly data-sly-use.primaryNav="com.adobe.aem.rmit.core.models.PrimaryNavModel">
+<div class="primary-nav full-width hidden-xs hidden-sm" >
+   <nav class="full-width">
+      <div class="nav-wraper col-md-12">
+         <div class="container">
+            <ul class="primary-navbar" data-sly-list.primaryMenu="${primaryNav.primaryNavMenu}">
+            
+               <li class="dropdown-menu-primary">
+				  <sly data-sly-use.menuLink="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url=primaryMenu.menuLink}">
+
+                  <a  href="${menuLink.mappedUrl}" class="dropdown-menu-primary__link ${menuLink.mappedUrl==''?'no-links':''}" data-analytics-type="primarynavlink"  data-analytics-value="${primaryMenu.menuHeading}" >${primaryMenu.menuHeading}</a>
+
+				  </sly>
+                   
+                  <ul class="dropdown-inside full-width">
+                     <li>
+                        <span  class="col-1">
+                           <ul class="dropdown-links col-md-12"  data-sly-list.primarySubMenu="${primaryMenu.subMenuItems}">
+							  <sly data-sly-use.menuLink="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =primarySubMenu.subMenuLink}">
+
+                              <li class="col-md-4"><a href="${menuLink.mappedUrl}" data-analytics-type="primarynavlink"  data-analytics-value="${primaryMenu.menuHeading}:${primarySubMenu.subMenuLabel}" ><i class="fa fa-chevron-right" aria-hidden="true"></i>${primarySubMenu.subMenuLabel}</a></li>
+
+							  </sly>
+                           </ul>
+                        </span>
+                        <span class="promo-wrap" >
+                            <sly data-sly-use.data="${'primaryexpfragment.js' @ fragmentPath= primaryMenu.fragmentPath}"  data-sly-unwrap>
+                                <sly data-sly-test="${!data.fragmentPath}">
+
+                                    <div data-sly-test="${(wcmmode.edit || wcmmode.preview)}"
+                                         class="cq-dd-experiencefragment cq-placeholder "
+                                         data-emptytext="${component.properties.jcr:title}${emptyTextAppend && ' - '}${emptyTextAppend}">
+
+                                    </div>
+                                </sly>
+                                <sly data-sly-test=${data.fragmentPath}
+                                     data-sly-resource="${@path=data.fragmentPath, selectors='content', wcmmode='disabled'}"></sly>
+                            </sly>
+                     	</span>
+
+                     </li>
+                  </ul>
+               </li> 
+            </ul>                   
+         </div>
+      </div>
+   </nav>
+</div>
+<!-- Mobile Primary Nav Content Starts -->
+<div class="col-xs-9 col-sm-9 topnav-mobi-accordion hidden-xs hidden-sm  hidden-xs hidden-section" >
+   <!-- Mobile Accordion Content Starts -->
+   <ul class="topnav-mobi-accsection primary" id="primary-mobile">
+      <sly data-sly-list.primaryMenu="${primaryNav.primaryNavMenu}">
+         <li class="topnav-mobi-acclinkssection">
+            <sly data-sly-use.menuLink="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =primaryMenu.menuLink}">
+
+               <a href="${menuLink.mappedUrl}" class="topnav-mobi-acclinks link" data-analytics-type="primarynavlink"  data-analytics-value="${primaryMenu.menuHeading}">${primaryMenu.menuHeading}</a>
+
+               <sly data-sly-list.primarySubMenu="${primaryMenu.subMenuItems}">
+                  <sly data-sly-test="${primarySubMenuList.count==1}"> <a href="#" class="topnav-mobi-acclinks angle"><i class="fa fa-angle-down"></i></a> </sly>
+               </sly>
+            </sly>
+         </li>
+         <li class="topnav-mobi-sublinkssection">
+            <ul class="topnav-mobi-sublinks" data-sly-list.primarySubMenu="${primaryMenu.subMenuItems}">
+               <sly data-sly-test="${primarySubMenu.subMenuLabel}">
+                  <sly data-sly-use.menuLink="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =primarySubMenu.subMenuLink}">
+
+                     <li class="col-md-3"><a href="${menuLink.mappedUrl}" data-analytics-type="primarynavlink"  data-analytics-value="${primaryMenu.menuHeading}:${primarySubMenu.subMenuLabel}">${primarySubMenu.subMenuLabel}</a></li>
+
+                  </sly>
+               </sly>
+            </ul>
+         </li>
+      </sly>
+   </ul>
+   <!-- Mobile Accordion Content Ends -->
+</div>
+<!-- Mobile Primary Nav Content Ends -->
+</sly>

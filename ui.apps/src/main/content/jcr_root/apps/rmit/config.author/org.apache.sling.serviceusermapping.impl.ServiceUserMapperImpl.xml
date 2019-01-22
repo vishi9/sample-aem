@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    user.default=""
+	user.mapping="[com.adobe.granite.oauth.server=oauthservice,com.adobe.granite.oauth.server:authentication-handler=admin,com.day.cq.cq-search-suggest=suggestionservice,au.edu.rmit.www.integration.rmit-integration:programImporter=rmitSystemUser,au.edu.rmit.www.integration.rmit-integration:staffImporter=staffUser,au.com.rmit.ui.core:csvimporter=csvimporter,au.com.rmit.staffsite.ui.core:writeservice=staffsiteimporter,au.com.rmit.ecb-ui.core:readService=pageReader,au.com.rmit.ui.core:bulkupdate=bulkupdate,com.adobe.aem.rmit-sites:rmitservice=csvimporter]"/>
+	

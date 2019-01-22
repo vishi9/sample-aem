@@ -1,0 +1,20 @@
+<sly data-sly-use.list="com.adobe.aem.rmit.core.models.RmitTagsModel">
+
+<div data-sly-test="${wcmmode.edit && !(list.getTagsWithUrl)}" data-sly-unwrap>
+        Tags and Link Component
+</div>
+
+<sly data-sly-test="${(list.getTagsWithUrl)}">
+Tags & Url mapping:
+
+<table border="1">
+<th>Tags Url</th><th>Tags</th>
+    <sly data-sly-list.listItems="${list.getTagsWithUrl}">
+	<tr>
+       <td>${listItems.tagsUrl}</td>
+       <td>${listItems.tags}</td>
+	</tr>
+ </table>
+ 
+ <sly>
+</sly>

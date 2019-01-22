@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <content-default
+                        jcr:description="Policy for editable layout containers"
+                        jcr:lastModified="{Date}2018-10-23T11:26:17.459+11:00"
+                        jcr:lastModifiedBy="e45750"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="RMIT Site Default"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/rmit/components/content/iconlist,group:RMIT.Content,group:RMIT.Structure]"
+                        policyResourceType="wcm/foundation/components/responsivegrid">
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="rmit/components/content/image"
+                                    type="Images"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-10-23T11:45:54.686+11:00"
+                            cq:lastReplicatedBy="e45750"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"
+                            mergeList="{Boolean}true"/>
+                    </content-default>
+                    <policy_27937558828510
+                        jcr:lastModified="{Date}2018-04-09T12:42:26.006-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="RMIT Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/rmit/components/content/breadcrumb,/apps/rmit/components/content/card,/apps/rmit/components/content/contentfragment,/apps/rmit/components/content/list,/apps/rmit/components/content/image,/apps/rmit/components/content/text,/apps/rmit/components/content/title,/apps/rmit/components/structure/header]">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <mapping_1522966073288
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="rmit/components/content/image"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </policy_27937558828510>
+                    <policy_107666467222245
+                        jcr:lastModified="{Date}2018-10-22T17:08:09.372+11:00"
+                        jcr:lastModifiedBy="e81140"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="RMIT Article Sidebar"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/rmit/components/content/news-date,/apps/rmit/components/content/socialshare]">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-10-23T12:17:54.224+11:00"
+                            cq:lastReplicatedBy="e27932"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_107666467222245>
+                    <policy_187232113286258
+                        cq:styleDefaultClasses="cmp-layout-container--footer full-width"
+                        jcr:lastModified="{Date}2018-04-09T10:47:08.290-04:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="RMIT Layout Container - Footer "
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_187232113286258>
+                    <policy_323433368001499
+                        jcr:lastModified="{Date}2018-10-23T13:46:00.575+11:00"
+                        jcr:lastModifiedBy="e81140"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="rmit-content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/rmit/components/content/articleheader,/apps/rmit/components/content/gridlist,/apps/rmit/components/content/iconlist,/apps/rmit/components/content/categorylist,group:RMIT.Content,group:RMIT.Structure]">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-10-23T13:51:53.639+11:00"
+                            cq:lastReplicatedBy="e81140"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_323433368001499>
+					<policy_1541778598180
+                        jcr:lastModified="{Date}2018-11-13T11:43:49.642+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Optional Components Policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/rmit/components/content/articleheader,/apps/rmit/components/content/gridlist,/apps/rmit/components/content/iconlist,/apps/rmit/components/content/news-date,/apps/rmit/components/content/topiccloud,group:RMIT-News-Homepage,group:RMIT.Content,/apps/rmit/components/structure/featurecontent,/apps/rmit/components/structure/promo,/apps/rmit/components/structure/rmitheader,/apps/rmit/components/structure/slimheader]">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-11-09T17:33:43.037+05:30"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_1541778598180>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
+    <rmit jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <form jcr:primaryType="nt:unstructured">
+                <container jcr:primaryType="nt:unstructured">
+                    <form-container
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="RMIT Site Form"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/rmit/components/form/button,/apps/rmit/components/form/hidden,/apps/rmit/components/form/options,/apps/rmit/components/form/text]">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-04-05T13:27:10.917-04:00"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </form-container>
+                </container>
+            </form>
+            <content jcr:primaryType="nt:unstructured">
+                
+                <text jcr:primaryType="nt:unstructured">
+                    <policy_609843930944306
+                        cq:styleDefaultClasses="cmp-text"
+                        jcr:lastModified="{Date}2018-10-01T13:16:25.055+10:00"
+                        jcr:lastModifiedBy="e27932"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="RMIT Text Chevron Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-10-01T20:22:39.675+10:00"
+                            cq:lastReplicatedBy="e36225"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <formats
+                                    jcr:primaryType="nt:unstructured"
+                                    override="true">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 1"
+                                        tag="h1"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 2"
+                                        tag="h2"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 3"
+                                        tag="h3"/>
+                                    <item4
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 4"
+                                        tag="h4"/>
+                                    <item5
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 5"
+                                        tag="h5"/>
+                                    <item6
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Heading 6"
+                                        tag="h6"/>
+                                    <item7
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Quote"
+                                        tag="blockquote"/>
+                                    <item8
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Horizontal Rule (visual line break)"
+                                        tag="hr"/>
+                                    <item9
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Preformatted"
+                                        tag="pre"/>
+                                </formats>
+                            </paraformat>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="sourceedit,specialchars">
+                                <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                    <chars
+                                        jcr:primaryType="nt:unstructured"
+                                        override="true">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;copy;"
+                                            name="copyright"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;euro;"
+                                            name="euro"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;reg;"
+                                            name="registered"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;trade;"
+                                            name="trademark"/>
+                                    </chars>
+                                </specialCharsConfig>
+                            </misctools>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="paste-plaintext,paste-wordhtml"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="bold,italic,underline"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                features="modifylink,unlink"/>
+                            <findreplace
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <undo
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <spellcheck
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                        </rtePlugins>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="chevronCustomList"
+                                        cq:styleId="1536123922236"
+                                        cq:styleLabel="Chevron"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_609843930944306>
+                </text>
+                
+                
+                
+                
+                
+                <articleheader jcr:primaryType="nt:unstructured">
+                    <policy_1536897739608
+                        jcr:lastModified="{Date}2018-10-02T15:36:38.423+10:00"
+                        jcr:lastModifiedBy="e27932"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Article-Header-styles"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-10-02T15:36:46.017+10:00"
+                            cq:lastReplicatedBy="e27932"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Color"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="RMIT-White"
+                                        cq:styleId="1536899817860"
+                                        cq:styleLabel="RMIT-White"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="RMIT-Navy"
+                                        cq:styleId="1536899821925"
+                                        cq:styleLabel="RMIT-Navy"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1536897739608>
+                </articleheader>
+                <intro jcr:primaryType="nt:unstructured">
+                    <policy_1538024447943
+                        cq:styleDefaultClasses="news--museo"
+                        jcr:lastModified="{Date}2018-10-02T14:43:10.587+10:00"
+                        jcr:lastModifiedBy="e81140"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="RMIT Intro Text Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-10-02T14:43:19.412+10:00"
+                            cq:lastReplicatedBy="e81140"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="news--Museo"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="news--museo"
+                                        cq:styleId="1538024468572"
+                                        cq:styleLabel="RMIT News Museo"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1538024447943>
+                </intro>
+                <iconlist jcr:primaryType="nt:unstructured">
+                    <policy_1538385470148
+                        cq:styleDefaultClasses="bg-navy"
+                        jcr:lastModified="{Date}2018-10-02T14:26:09.742+10:00"
+                        jcr:lastModifiedBy="e81140"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Icon List Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-10-02T14:29:49.977+10:00"
+                            cq:lastReplicatedBy="e81140"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="background"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="bg-navy"
+                                        cq:styleId="1538385527875"
+                                        cq:styleLabel="Peacock"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="bg-grey"
+                                        cq:styleId="1538385542620"
+                                        cq:styleLabel="Grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1538385470148>
+                </iconlist>
+                <gridlist jcr:primaryType="nt:unstructured">
+                    <policy_1538456501372
+                        jcr:lastModified="{Date}2018-10-02T15:07:46.417+10:00"
+                        jcr:lastModifiedBy="e27932"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Grid List policy"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        disableChildren="false"
+                        disableSearch="false"
+                        disableStatic="false"
+                        disableTags="false"
+                        linkItems="false"
+                        showDescription="false"
+                        showModificationDate="false">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-10-02T15:35:25.319+10:00"
+                            cq:lastReplicatedBy="e27932"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Layout"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="horizontal"
+                                        cq:styleId="1538456742135"
+                                        cq:styleLabel="Horizontal"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="vertical"
+                                        cq:styleId="1538456743419"
+                                        cq:styleLabel="Vertical"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Display"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="img-tile"
+                                        cq:styleId="1538456802103"
+                                        cq:styleLabel="Show Image"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="no-img"
+                                        cq:styleId="1538456803516"
+                                        cq:styleLabel="Hide Image"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_1538456501372>
+                </gridlist>
+                <categorylist jcr:primaryType="nt:unstructured">
+                    <policy_1538634020711
+                        cq:styleDefaultClasses="Styles"
+                        jcr:lastModified="{Date}2018-10-04T16:21:30.385+10:00"
+                        jcr:lastModifiedBy="e36225"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Category list"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-10-04T16:33:03.389+10:00"
+                            cq:lastReplicatedBy="e36225"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0 jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="category-blue"
+                                        cq:styleId="1538634058471"
+                                        cq:styleLabel="Navy blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="category-grey"
+                                        cq:styleId="1538634075151"
+                                        cq:styleLabel="grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1538634020711>
+                </categorylist>
+            </content>
+            <structure jcr:primaryType="nt:unstructured">
+                
+                
+                
+                <page jcr:primaryType="nt:unstructured">
+                    <policy_1536635743367
+                        jcr:description="UAT policy testing"
+                        jcr:lastModified="{Date}2018-09-11T13:18:29.141+10:00"
+                        jcr:lastModifiedBy="e45750"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Mary policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-09-11T13:23:48.114+10:00"
+                            cq:lastReplicatedBy="e78035"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy_1536635743367>
+                </page>
+                <rmitheader jcr:primaryType="nt:unstructured">
+                    <policy_1535694196372
+                        cq:styleDefaultClasses="standard  standared-RMIT-navy"
+                        jcr:lastModified="{Date}2018-10-22T17:02:47.466+11:00"
+                        jcr:lastModifiedBy="e81140"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Header Auto"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-10-23T12:17:54.224+11:00"
+                            cq:lastReplicatedBy="e27932"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Standard"
+                                cq:styleGroupMultiple="true"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="standard  standared-RMIT-navy"
+                                        cq:styleId="1535694246908"
+                                        cq:styleLabel="Navy Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="standard standared-RMIT-blue"
+                                        cq:styleId="1535695088535"
+                                        cq:styleLabel="RMIT Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="standard standared-RMIT-red"
+                                        cq:styleId="1535695103816"
+                                        cq:styleLabel="RMIT Red&#x9;"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                            <item1
+                                cq:styleGroupLabel="Hero"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="hero standard-RMIT-navy"
+                                        cq:styleId="1537521814741"
+                                        cq:styleLabel="Navy Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="hero standard-RMIT-blue"
+                                        cq:styleId="1537521851077"
+                                        cq:styleLabel="RMIT Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item2
+                                        cq:styleClasses="hero standard-RMIT-red"
+                                        cq:styleId="1537521887906"
+                                        cq:styleLabel="RMIT Red"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item1>
+                        </cq:styleGroups>
+                    </policy_1535694196372>
+                </rmitheader>
+                <promo jcr:primaryType="nt:unstructured">
+                    <policy_1540534056976
+                        cq:styleDefaultClasses="darkgrey"
+                        jcr:lastModified="{Date}2018-11-07T10:07:38.551+11:00"
+                        jcr:lastModifiedBy="e36249"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Promo Component Styles Policy"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2018-11-07T11:33:03.516+11:00"
+                            cq:lastReplicatedBy="e81140"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:styleGroups jcr:primaryType="nt:unstructured">
+                            <item0
+                                cq:styleGroupLabel="Styles"
+                                jcr:primaryType="nt:unstructured">
+                                <cq:styles jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleClasses="darkgrey"
+                                        cq:styleId="1540534072944"
+                                        cq:styleLabel="Dark Grey"
+                                        jcr:primaryType="nt:unstructured"/>
+                                    <item1
+                                        cq:styleClasses="peacokblue"
+                                        cq:styleId="1540534077696"
+                                        cq:styleLabel="Peacock Blue"
+                                        jcr:primaryType="nt:unstructured"/>
+                                </cq:styles>
+                            </item0>
+                        </cq:styleGroups>
+                    </policy_1540534056976>
+                </promo>
+            </structure>
+        </components>
+    </rmit>
+    <foundation jcr:primaryType="nt:unstructured">
+        <components jcr:primaryType="nt:unstructured">
+            <iparsys jcr:primaryType="nt:unstructured">
+				<policy_1541778302170
+                    jcr:description="This is for Header iparsys"
+                    jcr:lastModified="{Date}2018-11-12T10:08:54.417+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Iparsys Header Policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[/apps/rmit/components/structure/primarynav,/apps/rmit/components/structure/top-nav]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <section jcr:primaryType="nt:unstructured"/>
+                </policy_1541778302170>
+                <policy_534147096612381
+                    jcr:lastModified="{Date}2018-11-09T21:28:54.929+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Iparsys Footer Policy"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[/apps/rmit/components/content/acknowledgementofcountry,/apps/rmit/components/structure/footer,/apps/rmit/components/content/htmlcontainer]">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                    <section jcr:primaryType="nt:unstructured"/>
+                </policy_534147096612381>
+            </iparsys>
+        </components>
+    </foundation>
+</jcr:root>

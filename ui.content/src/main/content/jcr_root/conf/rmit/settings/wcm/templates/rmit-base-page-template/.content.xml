@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2018-10-16T10:57:13.385+11:00"
+        cq:lastModifiedBy="e81140"
+        cq:lastReplicated="{Date}2018-10-12T14:17:56.519+11:00"
+        cq:lastReplicatedBy="e35197"
+        cq:lastReplicationAction="Activate"
+        cq:templateType="/conf/rmit/settings/wcm/template-types/base-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="RMIT Base page template"
+        status="enabled"/>
+</jcr:root>

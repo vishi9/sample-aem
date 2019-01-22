@@ -1,0 +1,29 @@
+<div data-sly-test="${wcmmode.edit}">Edit RMIT Header Component</div>
+<div class="header-wraper standared-header no-gutter">
+   <img src="${properties.fileReference}" class="img-responsive standard-img" alt="HeroImage"/>
+   <div class="breadcrumbs"></div>
+   <div class="col-xs-12 col-sm-12 col-md-8 header-content">
+      <h1 class="content-header-content__heading">
+         ${currentPage.properties.jcr:title}
+      </h1>
+	  <div data-sly-test="${currentPage.properties.jcr:description}">
+			<p>${currentPage.properties.jcr:description}</p>
+      </div>
+      <sly data-sly-use.header="rmitheader.js">
+      <sly data-sly-test="${properties.ctaLabel}">
+         <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =header.ctaURL}" data-sly-unwrap >
+            <a href="${link.mappedUrl}" target="${header.newWindow}" aria-label="button for ${properties.ctaLabel}" data-analytics-type="intcampaign" data-analytics-value="${currentPage.properties.jcr:title}:${properties.ctaLabel}"><button aria-hidden="true" type="button" class="btn btn-cta hero-standared-btn"> ${properties.ctaLabel} </button></a>
+         </sly>
+         </sly>
+      </sly>
+   </div>
+   <div class="col-md-4 hidden-xs hidden-sm pixel" aria-hidden="true">
+      <div class="content-header__pixel-explosion pull-right">
+         <i class="content-header-explosion content-header-explosion--jay">
+            <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 180 180">
+               <path d="M89.764 0v89.764H0v89.763h179.527V0z" fill="#50D2FF" fill-rule="evenodd"></path>
+            </svg>
+         </i>
+      </div>
+   </div>
+</div>

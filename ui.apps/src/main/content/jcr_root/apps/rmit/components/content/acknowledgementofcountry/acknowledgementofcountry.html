@@ -1,0 +1,34 @@
+<b data-sly-test="${wcmmode.edit}">Edit Acknowledgement Of Country Component</b>
+<div class="country-acknowlegement__wrapper">
+	<div class="country-acknowledgement aem-Grid aem-Grid--12 aem-GridColumn--default--12 root">
+
+	   <div class="${properties.acknowledgementbackimage?'aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12':'aem-GridColumn aem-GridColumn--default--12'} ">
+			<div class="flags">
+				<img class="grunticon-ack-flag  flag-1" alt="Flag Image One" src="${properties.acknowledgementflagimage}">
+				<img class="grunticon-ack-flag flag-2" alt="Flag Image Two" src="${properties.acknowledgementflagsecondimage}">
+			</div>
+			<div class="title">
+				<p>${properties.acknowledgementheading}</p>
+			</div>
+			<div class="description">
+				<p>${properties.acknowledgementdescriptiontext}</p>
+			</div>
+			<div class="more">
+				
+				<div data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =properties.moreinformationlink}" data-sly-unwrap >
+					<i>
+						<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10">
+							<defs><style>.svg-chevron1{fill:#e60028;fill-rule:evenodd}</style></defs>
+							<path id="Icon_-_Chevron_Left" data-name="Icon - Chevron Left" class="svg-chevron1" d="M312 182.26l3.6 3.74-3.6 3.74 1.2 1.247 2.4-2.494L318 186l-2.4-2.493-2.4-2.494z" transform="translate(-312 -181)"></path>
+						</svg>
+					</i>
+					<a class="more" href="${link.mappedUrl}">
+					 ${properties.moreinformationtext}
+					</a>
+				</div> 
+			</div>
+		</div>
+		<div class="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--hide acknowledgementbackimage" style="background-image:url('${properties.acknowledgementbackimage @ context='unsafe'}');">
+		</div>
+	</div>
+</div>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>RMIT University</title>
+
+  <!-- for Google -->
+  <meta name="title" content="" />
+  <meta name="description" content="" />
+  <meta name="language" content="" />
+  <meta name="author" content="" />
+  <meta name="copyright" content="" />
+  <!-- for Facebook -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:description" content="" />
+  <!-- for Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image" content="" />
+
+</head>
+<body class="page basicpage rmit-basicpage">
+<!--base-page -->
+
+<div class="root responsivegrid">
+{{#block "header"}}
+  {{> header }}
+{{/block}}
+  <div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    {{#block "content"}}
+      {{> page }}
+    {{/block}}
+  </div>
+
+{{#block "footer"}}
+      {{> footer }}
+    {{/block}}
+</div>
+	{{#> aoc}}
+
+        {{> components/aoc }}
+	
+	
+{{/aoc}}
+<script src="../js/vendor.min.js"></script>
+<script src="../js/main.min.js"></script>
+<script src="../js/comp.min.js"></script>
+</body>
+</html>

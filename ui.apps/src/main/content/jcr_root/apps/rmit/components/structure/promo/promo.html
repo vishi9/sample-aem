@@ -1,0 +1,26 @@
+<div data-sly-test="${wcmmode.edit}">Edit Promo Component</div>
+<div class="promo">
+   <div class="promoWrapper">
+      <sly data-sly-test="${properties.fileReference}">
+         <div class="imgWrapper">
+            <div class="imgrollover">
+               <div class="promo-box">
+                  <img src="${properties.fileReference}" alt="PromoImage" />
+               </div>
+            </div>
+         </div>
+      </sly>
+      <div class="promoTitle">${properties.title}</div>
+      <sly data-sly-test="${properties.shortDescription}">
+         <div class="promoDescription">${properties.shortDescription}</div>
+      </sly>
+      <sly data-sly-test="${properties.ctaLabel}">
+         <div class="promoCta">
+            
+            <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =properties.ctaURL}" data-sly-unwrap>
+               <a href="${link.mappedUrl}" data-analytics-type='primarynavlink' data-analytics-value='${properties.ctaLabel}'><i class="fa fa-chevron-right" aria-hidden="true"></i>${properties.ctaLabel}</a>
+            </sly>
+         </div>
+      </sly>
+   </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="dateComponent">
+   <sly data-sly-use.result="com.adobe.aem.rmit.core.models.NewsTags">
+      <div data-sly-test="${wcmmode.edit && !(result.categoryList) && !(result.newsDate)}" data-sly-unwrap>
+         News Date Component
+      </div>
+      <sly data-sly-test="${result.categoryList}">
+         <ul data-sly-list.myitem="${result.categoryList}">
+             <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =myitem.tagsUrl}" data-sly-unwrap >
+            <a href="${link.mappedUrl}"><li class="dateTags">${myitem.tags}</li></a>
+            </sly>
+         </ul>
+      </sly>
+      <sly data-sly-test="${result.newsDate}">
+         <div class="dateStyles">${result.newsDate}</div>
+      </sly>
+   </sly>
+</div>

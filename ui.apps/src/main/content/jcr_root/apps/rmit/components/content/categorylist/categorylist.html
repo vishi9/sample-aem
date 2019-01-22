@@ -1,0 +1,51 @@
+<sly data-sly-use.list="com.adobe.aem.rmit.core.models.CategoryListModel">
+
+   <div data-sly-test="${wcmmode.edit && !list.categoryheading }" data-sly-unwrap>
+      Edit Category List Component
+   </div>
+
+   <!-- Desktop Wrapper Starts -->
+   <div class="category-links__wrapper col-sm-12 col-md-12 full-width" >
+      <sly data-sly-test="${list.categoryList}">
+         <div class="viewCategoryLinks">
+            <nav>
+               <ul class="row">
+                  <div data-sly-list.listItems="${list.categoryList}" >
+                     <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.categoryLinkUrl}" data-sly-unwrap >
+                        <li> <a data-analytics-type="newsnavlink" data-analytics-value="${listItems.categoryLinkLabel}" href="${link.mappedUrl}">${listItems.categoryLinkLabel}</a></li>
+                     </sly>
+                  </div>
+               </ul>
+            </nav>
+         </div>
+      </sly>
+   </div>
+   <!-- Desktop Wrapper Ends -->
+
+   <!-- Mobile Accordion starts -->
+   <div class="category-links__accordion col-xs-12 col-sm-12" role="tablist" aria-multiselectable="true">
+      <!-- Category header starts -->
+      <sly data-sly-test="${list.categoryheading && list.isOpenOnMobile}">
+         <div class="categoryLinksSection checked">
+            <a class="categoryLinksHeader" href="javascript:void(0);">
+            ${list.categoryheading}<i class="fa fa-angle-up categoryIcon"></i>
+            </a>
+         </div>
+      </sly>
+      <!-- Category header ends -->
+      <!-- Category body starts -->
+      <div class="categoryLinksCollapse">
+         <nav>
+            <ul>
+               <sly data-sly-list.listItems="${list.categoryList}" >
+                  <div data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.categoryLinkUrl}" data-sly-unwrap >
+                     <li><i class="fa fa-minus categoryLinksDash" aria-hidden="true"></i><a data-analytics-type="newsnavlink" data-analytics-value="${listItems.categoryLinkLabel}"  href="${link.mappedUrl}">${listItems.categoryLinkLabel}</a></li>
+                  </div>
+               </sly>
+            </ul>
+         </nav>
+      </div>
+      <!-- Category body ends -->
+   </div>
+   <!-- Mobile Accordion ends -->
+</sly>

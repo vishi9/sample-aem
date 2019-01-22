@@ -1,0 +1,42 @@
+<div data-sly-test="${wcmmode.edit}" data-sly-unwrap>
+      Edit Grid List Component
+</div>
+
+<div data-sly-use.list="com.adobe.aem.rmit.core.models.GridListModel">
+    <div class="component" id="${list.componentId}" data-limit="1">
+<div class="gridlist__container">
+    <div class="grid-list-wrapper" data-path="${currentNode.Path}">
+        <article class="grid-list">
+            <div class="row  cmp-list"
+    		data-sly-list.item="${list.gridList}"
+    		data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+    		data-sly-use.itemTemplate="item.html">
+            <div class="${properties.gridLayout == 'fourcolumn' ? 'col-xs-12 col-sm-6 col-md-3 cmp-list__item' : 'col-xs-12 col-sm-6 col-md-6 two-coloumn cmp-list__item' }" data-sly-call="${itemTemplate.item @ list = list, item = item}"></div>
+
+
+            </div>
+
+        </article>
+
+    </div>
+</div>
+
+    <sly data-sly-test="${properties.moreOptions=='showmore'}"> 
+		 <div data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =properties.showMoreLink}" data-sly-list="${list.gridList}" data-sly-unwrap >
+	         
+	          <a class="btn btn-primary btn-view-all" href="${link.mappedUrl}" role="link" tabindex="0" data-sly-test="${itemList.count==1 && !item.categoryTag}" data-analytics-type="gridlist" data-analytics-value="${item.title}:Show More">${properties.showMoreLabel}</a>
+              <a class="btn btn-primary btn-view-all" href="${link.mappedUrl}" role="link" tabindex="0" data-sly-test="${itemList.count==1 && item.categoryTag}" data-analytics-type="gridlist" data-analytics-value="${item.categoryTag}:${item.title}:Show More">${properties.showMoreLabel}</a>
+
+	     </div>
+
+ 	</sly>
+
+	<sly data-sly-test="${!list.hideLoadMore}">
+		<sly data-sly-test="${properties.moreOptions=='loadmore'}"> 
+			 <div class="col-md-offset-5" data-sly-list="${list.gridList}">
+				<a class="btn btn-primary btn-plus load-more" href="${link.mappedUrl}" role="link" tabindex="0" data-sly-test="${itemList.count==1}" data-analytics-type="gridlist" data-analytics-value="${item.title}:Load More">Load more<span> + </span></a>
+			</div>
+		 </sly>
+	 </sly>
+ </div>
+ </div>

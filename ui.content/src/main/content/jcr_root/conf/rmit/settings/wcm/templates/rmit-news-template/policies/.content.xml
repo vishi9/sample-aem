@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2018-10-24T11:39:52.405+11:00"
+        cq:lastModifiedBy="admin"
+        cq:lastReplicated="{Date}2018-10-23T15:09:34.487+11:00"
+        cq:lastReplicatedBy="e81140"
+        cq:lastReplicationAction="Activate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:uuid="ddbfac61-5739-45b0-bed9-765984be8638"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root
+            cq:policy="wcm/foundation/components/responsivegrid/content-default"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <responsivegrid
+                cq:policy="wcm/foundation/components/responsivegrid/content-default"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <rmit jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <content jcr:primaryType="nt:unstructured">
+                            <articleheader
+                                cq:policy="rmit/components/content/articleheader/policy_1536897739608"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <intro
+                                cq:policy="rmit/components/content/intro/policy_1538024447943"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <text
+                                cq:policy="rmit/components/content/text/policy_1523045426826"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </content>
+                        <structure jcr:primaryType="nt:unstructured">
+                            <rmitheader
+                                cq:policy="rmit/components/structure/rmitheader/policy_1535694196372"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </structure>
+                    </components>
+                </rmit>
+            </responsivegrid>
+            <iparfooter
+                cq:policy="foundation/components/iparsys/policy_85363955642042"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+            <articleheader
+                cq:policy="rmit/components/content/articleheader/policy_1536897739608"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+            <responsivegrid_484255378
+                cq:policy="wcm/foundation/components/responsivegrid/content-default"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <rmit jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <content jcr:primaryType="nt:unstructured">
+                            <text
+                                cq:policy="rmit/components/content/text/policy_1523045426826"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </content>
+                    </components>
+                </rmit>
+            </responsivegrid_484255378>
+            <intro
+                cq:policy="rmit/components/content/intro/policy_1538024447943"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+            <responsivegrid_2080930878
+                cq:policy="wcm/foundation/components/responsivegrid/policy_107666467222245"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+            <iparheader
+                cq:policy="foundation/components/iparsys/policy_1540341392265"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+            </iparheader>
+            <iconlist
+                cq:policy="rmit/components/content/iconlist/policy_1538039192890"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+        </root>
+    </jcr:content>
+</jcr:root>

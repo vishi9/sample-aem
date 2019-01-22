@@ -1,0 +1,34 @@
+@image-lable-bg:#F4F4F4;
+@image-border: 1px solid #6491BD;
+@image-text-color:#000054;
+@image-bottom-color:2px solid #000054;
+@image-padding:10px;
+@text-padding:5px;
+@margin-bottom-zero:0;
+@font-family-museo-300:"Museo300";
+
+.image-wraper{
+    margin: 10px 0;
+    .image-desc {
+      font-family:@font-family-museo-300;
+      font-size:16px;     
+      background-color: @image-lable-bg;
+      margin-bottom:@margin-bottom-zero;
+      color:@image-text-color;
+
+    }
+    .cmp-image__image {
+        width:100%;
+        height:auto;
+    }
+    .cmp-image__title{
+     padding:5px 0 5px 15px;
+     display:inline-block;   
+     line-height: 22px;
+     font-family: Museo500;
+     }
+     .cmp-image.img-border {
+         border-bottom: @image-bottom-color;
+     }
+
+}

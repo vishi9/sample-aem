@@ -1,0 +1,65 @@
+@rmit-red: #E60028;
+@rmit-navy: #000054;
+@font-family-museo-500: "Museo500";
+div.socialshare {
+    color: #ffffff;
+    position:relative;
+    .socialhead {
+        font-family: @font-family-museo-500;
+        font-size: 16px;
+        line-height: 26px;
+        color: @rmit-navy;
+        padding:20px 0px 10px 1px;
+        margin:0;
+    }
+    ul {
+        list-style-type: none;
+        -webkit-padding-start: 0px;
+        -moz-padding-start: 0px;
+    }
+    li {
+    	
+        display: inline-block;        
+        
+        .fa-stack {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .fa-facebook, .fa-twitter {
+            font-size: 15px;
+            margin-top: 2px;
+        }
+        .fa-linkedin, .fa-envelope {
+            font-size: 14px;
+        }
+        .fa-stack-1x, .fa-stack-2x{
+        z-index:-100;
+        }
+        .bg-facebook {
+            color: #3b5998;
+        }
+        .bg-twitter {
+            color: #1da1f2;
+        }
+        .bg-linkedin {
+            color: #0177b5;
+        }
+        .bg-email {
+            color: #070758;
+        }
+    }
+     li a{
+    		text-decoration:none;
+    		color: #ffffff;
+    	}
+    	
+    	 li a:hover{
+    		opacity:.8;
+    	}
+    @media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+        ul {
+            margin-left: -40px;
+        }
+    }
+}

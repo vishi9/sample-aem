@@ -1,0 +1,179 @@
+<div data-sly-test="${wcmmode.edit}">Edit Footer Component</div>
+<sly data-sly-use.list="com.adobe.aem.rmit.core.models.FooterModel">
+   <!-- Footer Wrapper starts -->
+   <div class="rmitFooter__Wrapper full-width">
+      <!-- Footer container starts -->
+      <div class="aem-Grid aem-Grid--2 aem-Grid--default--2">
+         <!-- Footer main row starts -->
+         <div class="desktopFooter">
+            <div class="row">
+               <!-- Footer footerListItems starts -->
+               <div class="row footerListItems">
+                  <div class="col-md-2">
+                     <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =list.logoUrl}" data-sly-unwrap >
+                        <a href="${link.mappedUrl}">
+                           <div class="logo">
+                              <img src="${properties.fileReference}" class="img-responsive"
+                                 alt="" />
+                           </div>
+                        </a>
+                     </sly>
+                     <div class=leftlinks>
+                        <ul data-sly-list.listItems="${list.leftList}">
+                           <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.leftListLinkUrl}" data-sly-unwrap >
+                              <li><a href="${link.mappedUrl}" data-analytics-type="footerlink" data-analytics-value="${listItems.leftListLinkLabel}">${listItems.leftListLinkLabel}</a></li>
+                           </sly>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-10">
+                     <!-- 3 column starts -->
+                     <sly data-sly-list.item="${list.rightList}">
+                        <div  class="row threecolumn" data-sly-list.child="${item}">
+                           <div class="${list.designClass}">
+                              <div class="footerheading">
+                                 <sly data-sly-test="${child.headingUrl}"> 
+							  <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =child.headingUrl}" data-sly-unwrap >
+                                    <a href="${link.mappedUrl}" data-analytics-type="footerlink" data-analytics-value="${child.heading}">${child.heading}</a>
+                                 </sly>
+								 </sly>
+								  <sly data-sly-test="${!child.headingUrl}"> 
+								  <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =child.headingUrl}" data-sly-unwrap >
+                                    ${child.heading}
+                                 </sly>
+								 </sly>
+                              </div>
+                              <ul data-sly-list.listItems="${child.links}">
+                                 <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.linkUrl}" data-sly-unwrap >
+                                    <li><a href="${link.mappedUrl}" data-analytics-type="footerlink" data-analytics-value="${child.heading}:${listItems.linkLabel}">${listItems.linkLabel}</a></li>
+                                 </sly>
+                              </ul>
+                           </div>
+                        </div>
+                     </sly>
+                  </div>
+                  <!-- 3 column ends -->
+               </div>
+            </div>
+            <!-- Footer footerListItems ends -->
+            <!-- Footer footerlegalShareItems starts -->
+            <div class="footerlegalShareItems">
+               <div class="footer-legal">
+                  <ul data-sly-list.listItems="${list.legalList}">
+                     <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.fieldUrl}" data-sly-unwrap >
+                        <li>
+                           <sly data-sly-test="${listItems.fieldUrl}">
+                              <a href="${link.mappedUrl}">${listItems.fieldLabel}</a>
+                           </sly>
+                           <sly data-sly-test="${!listItems.fieldUrl}">
+                              ${listItems.fieldLabel}
+                           </sly>
+                           <sly data-sly-test="${!listItemsList.last}"><span>
+                              | </span>
+                           </sly>
+                        </li>
+                     </sly>
+                  </ul>
+               </div>
+               <div class="social-nav">
+                  <ul data-sly-list.listItems="${list.socialList}">
+                     <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.logoLink}" data-sly-unwrap >
+                        <li><a href="${link.mappedUrl}"> <span
+                           class="fa-stack fa-md"> <i
+                           class="fa fa-circle fa-stack-2x bg-white"></i> <i
+                           class="${listItems.logoLabel} fa-stack-1x" title="${listItems.listTitle}"></i>
+                           </span>
+                           </a>
+                        </li>
+                     </sly>
+                  </ul>
+               </div>
+            </div>
+            <!-- Footer footerlegalShareItems ends -->
+         </div>
+         <!-- Footer main row ends -->
+         <!-- Footer desktop Wrapper ends -->
+         <!-- Footer Mobile Wrapper starts -->
+         <!-- Footer -->
+         <div class="footer-mob">
+            <div class="container">
+               <!-- Footer Top -->
+               <div class="footer-top">
+                  <ul class="footer-nav footermobrightcolumn">
+                     <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =list.logoUrl}" data-sly-unwrap >
+                        <li class="leftColNav">
+                           <a href="${link.mappedUrl}" class="logo"><img src="${properties.fileReference}" class="logo" /></a>
+                           <span class="fa fa-angle-up"></span>
+                           <ul class="first-list" data-sly-list.listItems="${list.leftList}">
+                              <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.leftListLinkUrl}" data-sly-unwrap >
+                                 <li><a href="${link.mappedUrl}" data-analytics-type="footerlink" data-analytics-value="${listItems.leftListLinkLabel}">${listItems.leftListLinkLabel}</a></li>
+                              </sly>
+                           </ul>
+                        </li>
+                    </sly>
+                     <sly data-sly-list.item="${list.rightList}">
+                        <sly data-sly-list.child="${item}">
+                           <li class="threeColWidth footerheadingmob">
+                              <sly data-sly-test="${child.headingUrl}"> 
+							  <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =child.headingUrl}" data-sly-unwrap >
+                                    <a href="${link.mappedUrl}" data-analytics-type="footerlink" data-analytics-value="${child.heading}">${child.heading}</a>
+                                 </sly>
+								 </sly>
+								  <sly data-sly-test="${!child.headingUrl}"> 
+								  <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =child.headingUrl}" data-sly-unwrap >
+                                    ${child.heading}
+                                 </sly>
+								 </sly>
+                              <span class="fa fa-angle-down"></span>
+                              <ul data-sly-list.listItems="${child.links}">
+                                 <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.linkUrl}" data-sly-unwrap >
+                                    <li><a href="${link.mappedUrl}" data-analytics-type="footerlink" data-analytics-value="${child.heading}:${listItems.linkLabel}">${listItems.linkLabel}</a></li>
+                                 </sly>
+                              </ul>
+                           </li>
+                        </sly>
+                     </sly>
+                  </ul>
+               </div>
+               <!--/ Footer 3 columnTop -->
+               <!-- Footer Bottom -->
+               <div class="footer-bottom">
+                  <div class="footerGrid2">
+                     <ul class="social-nav"
+                        data-sly-list.listItems="${list.socialList}">
+                        <li><a href="${listItems.logoLink}"> <span
+                           class="fa-stack fa-md" title="${listItems.listTitle}"> <i
+                           class="fa fa-circle fa-stack-2x bg-white"></i> <i
+                           class="${listItems.logoLabel} fa-stack-1x"></i>
+                           </span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="footerGrid1">
+                     <ul class="footer-cont"
+                        data-sly-list.listItems="${list.legalList}">
+                        <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =listItems.fieldUrl}" data-sly-unwrap >
+                           <li>
+                              <sly data-sly-test="${listItems.fieldUrl}">
+                                 <a href="${link.mappedUrl}">${listItems.fieldLabel}</a>
+                              </sly>
+                              <sly data-sly-test="${!listItems.fieldUrl}">
+                                 ${listItems.fieldLabel}
+                              </sly>
+                              <sly data-sly-test="${!listItemsList.last}"><span>|</span></sly>
+                           </li>
+                        </sly>
+                     </ul>
+                  </div>
+               </div>
+               <!--/ Footer Bottom -->
+            </div>
+         </div>
+         <!--/ Footer -->
+         <!-- Footer Mobile Wrapper ends -->
+      </div>
+      <!-- Footer container ends -->
+   </div>
+   <!-- Footer Wrapper ends --> 
+</sly>

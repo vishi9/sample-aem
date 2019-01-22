@@ -1,0 +1,37 @@
+<div class="socialshare" data-sly-test="${!pageProperties.hideSocialShare}" data-sly-use.basePage="${'com.adobe.aem.rmit.core.models.BasePage'}">
+   <h2 class="socialhead">Share</h2>
+   <ul>
+       <li>
+          <a href="#" data-share-network="facebook" aria-label="Share via Facebook" data-share-title="${basePage.facebookOgTitle}" data-analytics-type="socialshare" data-analytics-value="facebook">
+              <span class="fa-stack fa-md">
+                  <i class="fa fa-circle fa-stack-2x bg-facebook"></i>
+                  <i class="fa fa-facebook fa-stack-1x"></i>
+              </span>
+          </a>
+       </li>
+       <li>
+           <a href="#" data-share-network="linkedin" aria-label="Share via Linkedin" data-share-title="${basePage.facebookOgTitle}" data-analytics-type="socialshare" data-analytics-value="linkedin">
+               <span class="fa-stack fa-md">
+                  <i class="fa fa-circle fa-stack-2x bg-linkedin"></i>
+                  <i class="fa fa-linkedin fa-stack-1x"></i>
+               </span>
+           </a>
+       </li>
+       <li> 
+           <a href="#" data-share-network="twitter" aria-label="Share via Twitter" data-share-title="${basePage.twitterTitle}" data-analytics-type="socialshare" data-analytics-value="twitter">
+               <span class="fa-stack fa-md">
+                 <i class="fa fa-circle fa-stack-2x bg-twitter"></i>
+                 <i class="fa fa-twitter fa-stack-1x fontcolor"></i>
+               </span>
+           </a>
+       </li>
+       <li>
+           <a href="mailto:?subject=${pageProperties.jcr:title}&body=${basePage.EmailShare @ context='unsafe'}" aria-label="Share via Email" data-analytics-type="socialshare" data-analytics-value="email">
+               <span class="fa-stack fa-md">
+                  <i class="fa fa-circle fa-stack-2x bg-email"></i>
+                  <i class="fa fa-envelope fa-stack-1x"></i>
+               </span> 
+           </a>
+       </li>
+   </ul>
+</div>

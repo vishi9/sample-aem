@@ -1,0 +1,285 @@
+@peacockBlue: #0078ff;
+@darkgrey: #333333;
+@rmit-white: #ffffff;
+@font-family-museo-500: "Museo500",serif;
+@RMIT-Blue-color:#50d2ff;
+@font-family-helvetica-neue: "Helvetica Neue",sans-serif;
+.darkgrey {
+    .promo {
+        width: 100%;
+        float: left;
+        background-color: @darkgrey;
+        .promoWrapper {
+            padding: 46px 84px 49px 41px;
+            .imgWrapper {
+                box-sizing: border-box;
+                .imgrollover {
+                    overflow: hidden;
+                }
+                .promo-box img {
+                    position: relative;
+                    max-width: 100%;
+                    z-index: 1;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+                    -webkit-transform: translateZ(0);
+                    transform: translateZ(0);
+                    width: 100%;
+                    height: auto;
+                }
+                .promo-box:hover img {
+                    -webkit-transform: scale(1.095);
+                    -moz-transform: scale(1.095);
+                    -ms-transform: scale(1.095);
+                    -o-transform: scale(1.095);
+                    transform: scale(1.095);
+                }
+            }
+            .promoTitle {
+                color: @rmit-white;
+                font-family: @font-family-museo-500;
+                font-size: 16px;
+                line-height: 20px;
+                margin-top: 10px;
+            }
+            .promoDescription {
+                color: @rmit-white;
+                font-family: @font-family-helvetica-neue;
+                font-size: 13px;
+			    line-height: 18px;
+			    margin-top: 8px;
+            }
+            .promoCta {
+                color: @rmit-white;
+                font-family: @font-family-museo-500;
+                font-size: 12px;
+                line-height: 20px;
+                margin-top: 8px;
+				background-color: @darkgrey;
+                @-webkit-keyframes bounceRight {
+                    0%, 100% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    56% {
+                        -webkit-transform: translateX(4px);
+                        transform: translateX(4px);
+                    }
+                }
+                @-moz-keyframes bounceRight {
+                    0%, 100% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    56% {
+                        -webkit-transform: translateX(4px);
+                        transform: translateX(4px);
+                    }
+                }
+                @keyframes bounceRight {
+                    0%, 100% {
+                        -moz-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    56% {
+                        -moz-transform: translateX(4px);
+                        -ms-transform: translateX(4px);
+                        -webkit-transform: translateX(4px);
+                        transform: translateX(4px);
+                    }
+                }
+                a {
+                    text-decoration: underline;
+                    color: @rmit-white;
+                     font-size: 12px;
+                     font-family: @font-family-museo-500;
+                    .fa-chevron-right {
+                        font-size: 10px;
+                        margin-right: 5px;
+                        color: #50d2ff;
+                        &:hover {
+                            -webkit-animation: bounceRight 1s alternate;
+	                        -webkit-animation-iteration-count: alternate;
+	                         animation: bounceRight 1s alternate;
+	                         animation-iteration-count: alternate;
+                        }
+                    }
+                }
+            }
+            .promoCta {
+                color: @rmit-white;
+                font-family: @font-family-museo-500;
+                font-size: 12px;
+                line-height: 20px;
+                margin-top: 8px;
+                @-webkit-keyframes bounceRight {
+                    0%, 100% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    56% {
+                        -webkit-transform: translateX(4px);
+                        transform: translateX(4px);
+                    }
+                }
+                @-moz-keyframes bounceRight {
+                    0%, 100% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    56% {
+                        -webkit-transform: translateX(4px);
+                        transform: translateX(4px);
+                    }
+                }
+                @keyframes bounceRight {
+                    0%, 100% {
+                        -moz-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    56% {
+                        -moz-transform: translateX(4px);
+                        -ms-transform: translateX(4px);
+                        -webkit-transform: translateX(4px);
+                        transform: translateX(4px);
+                    }
+                }
+                a {
+                     font-size: 12px;
+                     font-family: @font-family-museo-500;
+                    text-decoration: underline;
+                    color: @RMIT-Blue-color;
+                    .fa-chevron-right {
+                        font-size: 10px;
+                        margin-right: 5px;
+                        color: @RMIT-Blue-color;
+                    }
+                      &:hover {
+                    .fa-chevron-right {
+                        -webkit-animation: bounceRight 1s alternate;
+                        -webkit-animation-iteration-count: alternate;
+                         animation: bounceRight 1s alternate;
+                         animation-iteration-count: alternate;
+                    }
+                }
+                }
+
+            }
+        }
+    }
+}
+.peacokblue {
+    .promo {
+        width: 100%;
+        float: left;
+        background-color: @peacockBlue;
+        .promoWrapper {
+            padding: 46px 84px 49px 41px;
+            .imgWrapper {
+                box-sizing: border-box;
+                .imgrollover {
+                    overflow: hidden;
+                }
+                .promo-box img {
+                    position: relative;
+                    max-width: 100%;
+                    z-index: 1;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+                    -webkit-transform: translateZ(0);
+                    transform: translateZ(0);
+                    width: 100%;
+                    height: auto;
+                }
+                .promo-box:hover img {
+                    -webkit-transform: scale(1.095);
+                    -moz-transform: scale(1.095);
+                    -ms-transform: scale(1.095);
+                    -o-transform: scale(1.095);
+                    transform: scale(1.095);
+                }
+            }
+            .promoTitle {
+                color: @rmit-white;
+                font-family: @font-family-museo-500;
+                font-size: 16px;
+                line-height: 20px;
+                margin-top: 10px;
+            }
+            .promoDescription {
+                color: @rmit-white;
+                font-family: @font-family-helvetica-neue;
+               font-size: 13px;
+			    line-height: 18px;
+			    margin-top: 8px;
+            }
+            .promoCta {
+                color: @rmit-white;
+                font-family: @font-family-museo-500;
+                font-size: 12px;
+                line-height: 20px;
+                margin-top: 8px;
+                background-color: @peacockBlue;
+                @-webkit-keyframes bounceRight {
+                    0%, 100% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    56% {
+                        -webkit-transform: translateX(4px);
+                        transform: translateX(4px);
+                    }
+                }
+                @-moz-keyframes bounceRight {
+                    0%, 100% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    56% {
+                        -webkit-transform: translateX(4px);
+                        transform: translateX(4px);
+                    }
+                }
+                @keyframes bounceRight {
+                    0%, 100% {
+                        -moz-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    56% {
+                        -moz-transform: translateX(4px);
+                        -ms-transform: translateX(4px);
+                        -webkit-transform: translateX(4px);
+                        transform: translateX(4px);
+                    }
+                }
+                a {
+                    text-decoration: underline;
+                    color: @rmit-white;
+                    font-size: 12px;
+                     font-family: @font-family-museo-500;
+                    background-color: @peacockBlue;
+                    .fa-chevron-right {
+                        font-size: 10px;
+                        margin-right: 5px;
+                        color: #50d2ff;
+                    }
+                     &:hover {
+                    .fa-chevron-right {
+                        -webkit-animation: bounceRight 1s alternate;
+                        -webkit-animation-iteration-count: alternate;
+                         animation: bounceRight 1s alternate;
+                         animation-iteration-count: alternate;
+                    }
+                }
+                }
+
+            }
+        }
+    }
+}

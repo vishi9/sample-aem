@@ -1,0 +1,11 @@
+<div class="topics-wrapper">
+   <sly data-sly-use.result="com.adobe.aem.rmit.core.models.NewsTags">
+   <div data-sly-test="${wcmmode.edit && !result.topicList}" data-sly-unwrap>
+      Topic Cloud Component
+   </div>
+   <sly data-sly-test="${result.topicList}">
+      <ul data-sly-list.myitem="${result.topicList}">
+         <li data-analytics-type="topiccloud" data-analytics-value="${myitem}" >${myitem}</li>
+      </ul>
+   </sly>
+</div>

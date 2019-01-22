@@ -1,0 +1,279 @@
+/*** Variables Starts ***/
+@font-family-museo-500: "Museo500", serif;
+@font-family-helvetica-neue : "Helvetica Neue", sans-serif;
+@rmit-white : #ffffff;
+@rmit-navy: #000054;
+@rmit-blue : #070754;
+@rmit-dark-blue: #f5f5f5;
+@rmit-grey: #e7e6e6;
+/*** Variables Ends ***/
+
+/*** Desktop Starts ***/
+.category-blue {
+    .category-links__wrapper {
+        color: @rmit-white;
+        background-color: @rmit-blue;
+        ul li {
+          border-right: 2px solid @rmit-white;
+            a {    
+            color: @rmit-white;
+            font-family: @font-family-museo-500;
+            background-color: @rmit-blue;
+            display: inline-table;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            }
+        }
+    }
+}
+
+.category-grey {
+    .category-links__wrapper {
+        color: @rmit-blue;
+        background-color: @rmit-dark-blue;
+        ul li {
+          border-right: 2px solid @rmit-blue;
+            a {    
+            color: @rmit-blue;
+            font-family: @font-family-museo-500;
+            background-color: @rmit-dark-blue;
+            display: inline-table;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            }
+        }
+   }
+}
+
+.category-links__wrapper {
+display: flex; 
+flex-wrap: wrap;
+flex-direction: row; /* make main-axis vertical */
+text-align: justify; /* align text justify */    
+justify-content: center; /* align items vertically */
+align-items: center; /* align items horizontally */
+width:100%;
+padding:30px 0;
+margin-top:49px;
+margin-bottom:38px;    
+           
+.viewCategoryLinks {       
+    text-align: center;
+    
+    ul li:first-child {
+    padding-left: 0;
+    }
+    
+    ul li:last-child {
+    border:none;
+    padding-right: 0;
+    }
+    
+    ul li.noborder {
+    border-right:none;
+    }
+      
+    ul li {
+    display: inline;
+    height:22px;
+    line-height: 1.1;
+    padding:0 25px 0 25px;
+    }
+      
+    ul li a {
+    cursor: pointer;
+    height:22px;
+    line-height: 1.1;
+    font-size: 20px;
+    }
+    
+    .noTextDecoration {
+    cursor:default;
+    text-decoration:none;
+    }
+    
+    ul.row {
+    margin:0;
+    padding-left:0;
+    padding-right:0;
+    }
+  }
+  
+}
+/*** Desktop Ends ***/
+
+/*** Mobile Starts ***/
+.category-blue {
+    .category-links__accordion {
+    background-color: @rmit-navy;
+        
+        .categoryLinksSection {
+        width: 100%;
+        height:79px;
+        margin:4px 0 4px 0;
+        padding:32px 0 0 28px;
+        border-top:1px solid @rmit-white;
+            
+            a.categoryLinksHeader {
+            height:32px;
+            font-family: @font-family-museo-500;
+            font-size:20px;
+            line-height: 0.8;
+            color: @rmit-white;
+            }            
+        }
+        
+        .categoryLinksCollapse {
+            border-bottom:1px solid @rmit-white !important;
+            margin-bottom: 4px;
+            
+            ul {
+                margin:0;
+                padding:0;                
+            }
+            ul li {
+                width:100%;
+                height:38px;
+                color:@rmit-white;
+                list-style-type:none;  
+                padding:4px 0 0 45px;                
+            }
+            
+            ul li a {
+                color: @rmit-white;
+                font-family: @font-family-helvetica-neue;
+                font-size:16px;
+                line-height: 1.88;
+            }
+            
+            ul li.selected,
+            ul li.selected a,
+            ul li:hover,
+            ul li:hover a,
+            ul li:focus,
+            ul li:active,
+            ul li a:hover {
+                color:@rmit-navy;
+                background-color: @rmit-white;
+            }
+            
+        }
+        
+    }
+}
+
+.category-grey {    
+     .category-links__accordion {
+         
+        .categoryLinksSection {
+        width: 100%;
+        height:85px;        
+        padding:32px 0 0 28px;
+        border-top:2px solid @rmit-grey;
+        border-bottom:2px solid @rmit-grey !important;
+        background-color: @rmit-dark-blue;
+
+            a.categoryLinksHeader {
+            height:32px;
+            font-family: @font-family-museo-500;
+            font-size:20px;
+            line-height: 0.8;
+            color: @rmit-blue;
+            }            
+        }
+
+        .categoryLinksCollapse {
+            color:@rmit-navy;
+            background-color: @rmit-white;
+            border-bottom:1px solid @rmit-grey;
+            margin-bottom: 4px;
+
+            ul {
+                margin:0;
+                padding:0;                
+            }
+            ul li {
+                width:100%;
+                height:38px;
+                list-style-type:none;  
+                padding:4px 0 0 45px;                
+            }
+            
+            ul li a {
+                color: @rmit-navy;
+                opacity: 0.86;
+                font-family: @font-family-helvetica-neue;
+                font-size:16px;
+                line-height: 1.88;
+            }
+
+            ul li.selected,
+            ul li.selected a,
+            ul li:hover,
+            ul li:hover a,
+            ul li:focus,
+            ul li:active,
+            ul li a:hover {
+                color:@rmit-navy;
+                opacity: 0.75;
+                background-color: @rmit-grey;
+            }
+
+        }
+        
+    }
+}
+
+.category-links__accordion {
+width:100%;
+margin: 0 0 40px 0;
+padding:0;
+    
+    a {
+    text-decoration: none;
+    }    
+    a.categoryLinksHeader:hover,
+    a.categoryLinksHeader:focus,
+    a.categoryLinksHeader:active {
+    text-decoration: none;
+    }
+    .categoryIcon {
+    float: right;
+    font-size:28px;
+    margin:0 29px 0 0;
+    }
+    .categoryLinksDash {
+    margin:0 15px 0 0;
+    }                    
+}
+/*** Mobile Ends ***/
+
+/*** Media Query Starts ***/
+/*** Desktop/Laptop Design Starts ***/
+@media only screen and (min-width: 992px) {
+    .category-links__wrapper {
+        display: flex;
+    }
+    .category-links__accordion {
+        display: none;
+    }
+} 
+/*** Desktop/Laptop Design Ends ***/
+
+/*** Mobile/Tablet Design Starts ***/
+@media only screen and (max-width: 991px) {
+    .category-links__wrapper {
+        display: none;
+    }
+    .category-links__accordion {
+        display: block;
+        .categoryLinksSection {
+            display: none;
+            &.checked {
+              display: block;  
+            }            
+        }
+    }
+} 
+/*** Mobile/Tablet Design Ends ***/
+/*** Media Query Ends ***/

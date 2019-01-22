@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2018-11-21T21:56:57.643+11:00"
+        cq:lastModifiedBy="e36217"
+        cq:lastReplicated="{Date}2018-11-21T21:34:32.882+11:00"
+        cq:lastReplicatedBy="e36217"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/rmit/settings/wcm/templates/rmit-news-home-page-template"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="11a26ac4-42f4-407e-9ebd-9c7447b4e820"
+        sling:resourceType="rmit/components/structure/homepage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <iparheader
+                jcr:lastModified="{Date}2018-09-02T08:20:59.989+10:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/iparsys"/>
+            <responsivegrid
+                jcr:created="{Date}2018-08-05T07:53:26.257+10:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2018-08-05T07:53:26.257+10:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+            </responsivegrid>
+            <iparfooter
+                jcr:lastModified="{Date}2018-09-02T08:20:59.989+10:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/iparsys"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1024"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

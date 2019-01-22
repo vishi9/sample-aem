@@ -1,0 +1,60 @@
+<div data-sly-test="${wcmmode.edit}">Edit Feature Content Component</div>
+<sly data-sly-use.featureContent="com.adobe.aem.rmit.core.models.FeatureContentModel">
+    <section class="col-md-12 col-lg-12 feature-content__wrapper featurecontent-fullwidth">
+            <div class="col-md-12 col-lg-12 feature-content__desk lazy slider">
+            <sly data-sly-list.featureList="${featureContent.cardList}">
+            <div class="col-md-12 col-lg-12 featurecon-desk-slider">
+                <div class="col-md-4 col-lg-4 featurecon-desk-leftsection">
+                    <sly data-sly-test="${featureList.heading}">
+                        <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =featureList.link}" data-sly-unwrap >
+                            <p><a href="${link.mappedUrl}" class="featurecon-desk-headinglink" data-analytics-type='intCampaign' data-analytics-value='${featureList.heading}'data-analytics-impressions='${featureList.heading}'>${featureList.heading}</a></p>
+                        </sly>
+                     </sly>
+                    <sly data-sly-test="${featureList.shortDescription}">
+                        <p class="featurecon-desk-desc">${featureList.shortDescription}</p>
+                    </sly>
+                    <sly data-sly-test="${featureList.ctaLabel}">
+                        <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =featureList.link}" data-sly-unwrap >
+                            <p><a class="btn btn-primary btn-desk-view" href="${link.mappedUrl}" data-analytics-type='intCampaign' data-analytics-value='${featureList.ctaLabel}'data-analytics-impressions='${featureList.ctaLabel}' role="button">${featureList.ctaLabel}</a></p>
+                        </sly>
+                    </sly>
+                </div>
+                <div class="col-md-8 col-lg-8 featurecon-desk-rightsection">
+                    <sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =featureList.link}" data-sly-unwrap >
+                        <a href="${link.mappedUrl}" data-analytics-type='intCampaign' data-analytics-value='${featureList.heading}'data-analytics-impressions='${featureList.heading}'><img data-lazy="${featureList.image}" alt="${featureList.imageAltText}" height="446" /></a>
+                    </sly>
+                </div>
+            </div>
+            </sly>		
+        </div>
+    </section>
+    <!-- mobile starts -->
+	<section class="col-xs-12 col-sm-12 feature-content__container featurecontent-fullwidth">    
+		<div class="col-xs-12 col-sm-12 feature-content__mobi lazy slider">
+			<sly data-sly-list.featureList="${featureContent.cardList}">
+				<div class="col-xs-12 col-sm-12 featurecon-mobi-slidersection">
+					<p class="featurecon-mobi-imgcontainer">
+						<sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =featureList.link}" data-sly-unwrap >
+							<a href="${link.mappedUrl}" data-analytics-type='intCampaign' data-analytics-value='${featureList.heading}' data-analytics-impressions='${featureList.heading}'><img data-lazy="${featureList.image}" alt="${featureList.imageAltText}" height="233"/></a>
+						</sly>
+					</p>
+					<span class="col-xs-12 col-sm-12 featurecon-mobi-border"></span>
+						<sly data-sly-test="${featureList.heading}">
+							<sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =featureList.link}" data-sly-unwrap >
+								<p class="featurecon-mobi-headingcontainer"><a href="${link.mappedUrl}" class="featurecon-mobi-headinglink" data-analytics-type='intCampaign' data-analytics-value='${featureList.heading}'data-analytics-impressions='${featureList.heading}'>${featureList.heading}</a></p>
+							</sly>
+						</sly>
+						<sly data-sly-test="${featureList.shortDescription}">
+							<p class="featurecon-mobi-desc">${featureList.shortDescription}</p>
+						</sly>
+						<sly data-sly-test="${featureList.ctaLabel}">
+							<sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =featureList.link}" data-sly-unwrap >
+								<p class="featurecon-mobi-btncontainer"><a class="btn btn-primary btn-mobile-view"  href="${link.mappedUrl}" role="button" data-analytics-type='intCampaign' data-analytics-value='${featureList.ctaLabel}'data-analytics-impressions='${featureList.ctaLabel}'>${featureList.ctaLabel}</a></p>
+							</sly>
+						</sly>
+				</div>
+			</sly>
+		</div>
+	</section>
+<!-- mobile  ends -->
+</sly>

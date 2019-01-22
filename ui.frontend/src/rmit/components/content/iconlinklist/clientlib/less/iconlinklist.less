@@ -1,0 +1,94 @@
+@rmit-navy: #000054;
+@rmit-white: #ffffff;
+@rmit-red: #e60028;
+@rmit-grey: #f5f5f5;
+@rmit-blue: #0078ff;
+@font-family-museo-500: "Museo500";
+.iconlist.aem-GridColumn.aem-GridColumn--default--12 {
+    padding-right: 0;
+}
+.iconlist--full-width {
+    margin: ~"0px calc((100vw - 100%) / -2)";
+    width: 100vw !important;
+}
+div.bg-navy .iconlist__wrapper {
+    padding: 20px;
+    background-color: @rmit-blue;
+    color: @rmit-white;
+    margin: 20px 0;
+}
+div.bg-grey .iconlist__wrapper {
+    padding: 20px;
+    background-color: @rmit-grey;
+    color: @rmit-navy;
+    margin: 20px 0;
+}
+div.bg-navy {
+    font-family: @font-family-museo-500;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: @rmit-white;
+    .iconListHeading {
+        font-family: @font-family-museo-500;
+        font-size: 22px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        padding-bottom: 25px;
+        text-decoration: none;
+        color: @rmit-white;
+    }
+    .pb-20 {
+        padding-bottom: 20px;
+    }
+    .fa {
+        font-size: 20px;
+    }
+    a {
+        color: @rmit-white;
+    }
+    a:hover {
+        color: @rmit-white;
+        text-decoration: underline;
+    }
+}
+div.bg-grey {
+    font-family: @font-family-museo-500;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    color: @rmit-navy;
+    .iconListHeading {
+        font-family: @font-family-museo-500;
+        font-size: 22px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        padding-bottom: 25px;
+        color: @rmit-navy;
+    }
+    .pb-20 {
+        padding-bottom: 20px;
+    }
+    .fa {
+        font-size: 20px;
+    }
+    a {
+        color: @rmit-navy;
+    }
+    a:hover {
+        color: @rmit-navy;
+        text-decoration: underline;
+    }
+}

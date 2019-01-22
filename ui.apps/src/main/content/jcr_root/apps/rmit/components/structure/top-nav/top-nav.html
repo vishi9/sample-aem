@@ -1,0 +1,126 @@
+<sly data-sly-use.lists="com.adobe.aem.rmit.core.models.TopNavModel">
+   <sly data-sly-test="${wcmmode.edit && !lists.assetPicker}" data-sly-unwrap> Edit Top Nav Component </sly>
+   <sly data-sly-test="${lists.assetPicker}">
+      <!--  -->
+      <section class="col-md-12 col-lg-12 top-nav__wrapper full-width">
+         <div class="col-md-2 col-lg-2 topnav-logosection">
+            <sly data-sly-use.linkAsset="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =lists.assetLink}" data-sly-unwrap>
+               <a href="${linkAsset.mappedUrl}" aria-label="RMIT Logo"><img src="${lists.assetPicker}" width="126" height="41" alt="RMIT University logo" /></a>
+            </sly>
+         </div>
+         <nav class="col-md-8 col-lg-8 topnav-links" role="navigation">
+            <ul class="row topnav-list" data-sly-list.tabItems="${lists.topNavTabList}">
+               <li class="${tabItems.tabHighlight == 'yes' ? 'default':''}" data-link="main">
+                  <sly data-sly-use.linkTab="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =tabItems.tabUrl}">
+                     <a href="${linkTab.mappedUrl}"  class="${linkTab.mappedUrl==''?'nodecoration':'decoration'}"   data-analytics-type="topnavlink" data-analytics-value="${tabItems.tabHeading}">${tabItems.tabHeading}</a> 
+                  </sly>
+                  <div class="topnav-sublinks">
+                     <ul class="topnav-sublist" data-sly-list.menuItems="${tabItems.menuList}">
+                        <sly data-sly-test="${menuItems.menuItemLabel}">
+                           <sly data-sly-use.linkMenu="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =menuItems.menuItemLink}">
+                              <li><a href="${linkMenu.mappedUrl}" class="${linkMenu.mappedUrl==''?'nodecoration':'decoration'}" data-analytics-type="topnavlink" data-analytics-value="${tabItems.tabHeading}:${menuItems.menuItemLabel}">${menuItems.menuItemLabel}</a></li>
+                           </sly>
+                           <span class="topnav-border"></span>
+                        </sly>
+                     </ul>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+         <div class="col-md-1 col-lg-1 topnav-usersection" aria-hidden="true">
+            <a href="#" class="decoration"><i class="fa fa-user fa-2x"></i></a>
+         </div>
+            <sly data-sly-test="${lists.searchLink}">
+         		<div class="col-md-1 col-lg-1 topnav-searchsection">
+            	<a href="#" class="topnav-search-main decoration"><i class="fa fa-search fa-2x"></i></a>
+         		</div>
+            </sly>
+      </section>
+      <!-- Desktop Wrapper Ends -->
+      <!-- Search Starts -->
+
+      <div class="col-md-12 col-lg-12 top-nav__search">
+         <div class="col-md-12 col-lg-12 topnav-searchsection">
+            <div class="col-md-11 col-lg-11 topnav-search-text">${lists.searchHeading}</div>
+            <div class="topnav-search-close">
+               <a href="#"><span class="topnav-search-closebtn"></span></a>
+            </div>
+         </div>
+         <div class="col-md-12 col-sm-12 topnav-searchbox-section">
+            <span class="col-md-11 col-lg-11"> 
+            <input type="text" placeholder="Search" name="search" id="topnav-search-value" class="topnav-searchbox-text" aria-label="Search">
+            </span> 
+            <span class="col-md-1 col-lg-1 topnav-searchbox-iconsection">
+               <sly
+                  data-sly-use.linkSearch="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =lists.searchLink}">
+                  <a href="${linkSearch.mappedUrl}" class="topnav-searchbox-icon" aria-label="Search"><i
+                     class="fa fa-search fa-3x"></i></a> 
+               </sly>
+            </span>
+         </div>
+      </div>
+
+      <!-- Search Ends -->
+      <!-- Mobile Accordion Starts -->
+      <section class="col-xs-12 col-sm-12 top-nav__accordion full-width">
+         <!-- Mobile Header Starts -->
+         <div class="col-xs-12 col-sm-12 topnav-mobi-header">
+            <div class="col-xs-6 col-sm-6 topnav-mobi-logosection">
+               <sly data-sly-use.linkAsset="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =lists.assetLink}" data-sly-unwrap>
+                  <a href="${linkAsset.mappedUrl}"><img src="${lists.assetPicker}" width="96" height="30" /></a>
+               </sly>
+            </div>
+            <div class="topnav-mobi-iconssection">
+               <span class="topnav-mobi-user" aria-hidden="true"><a href="#"
+                  class="topnav-mobi-usericon"><i class="fa fa-user fa-1x"></i></a></span> 
+					<sly data-sly-test="${lists.searchLink}">
+                 		 <span class="topnav-mobi-search"><a href="#" class="topnav-mobi-searchicon"><i class="fa fa-search fa-1x"></i></a></span>
+					</sly>
+               <span class="topnav-mobi-close"><a href="#"
+                  class="topnav-mobi-closeicon" aria-label="Close"><i class="fa fa-times fa-1x"></i></a></span>
+               <span class="topnav-mobi-bars"><a href="#"
+                  class="topnav-mobi-barsicon"><i class="fa fa-bars fa-1x"></i></a></span>
+            </div>
+         </div>
+         <!-- Mobile Header Ends -->
+         <!-- Mobile Search Starts -->
+         <div class="col-xs-12 col-sm-12 topnav-mobi-subsearch">
+            <span class="col-xs-10 col-sm-10 topnav-mobi-textsection"> 
+            <input type="text" placeholder="Search" name="search" id="topnav-mobi-searchvalue" class="topnav-mobi-searchtext" aria-label="Search">
+            </span> <span class="col-xs-2 col-sm-2 topnav-mobi-subsearchsection">
+            <a href="${linkSearch.mappedUrl}" class="topnav-mobi-selectsearchicon" aria-label="Search" ><i
+               class="fa fa-search fa-1x"></i></a>
+            </span>
+         </div>
+         <!-- Mobile Search Ends -->
+         <!-- Mobile Accordion Display Starts -->
+         <div class="col-xs-9 col-sm-9 topnav-mobi-accordion">
+            <!-- Mobile Accordion Content Starts -->
+            <div class="topnav-mobi-accsection">
+               <sly data-sly-list.tabItems="${lists.topNavTabList}">
+                  <div class="topnav-mobi-acclinkssection">
+                     <sly data-sly-use.linkTab="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =tabItems.tabUrl}">
+                        <a href="${linkTab.mappedUrl}" class="topnav-mobi-acclinks" data-analytics-type="topnavlink" data-analytics-value="${tabItems.tabHeading}">${tabItems.tabHeading}</a>
+                        <sly data-sly-list.menuItems="${tabItems.menuList}">
+                           <sly data-sly-test="${menuItemsList.count==1}"> <a href="#" class="topnav-mobi-acclinks"><i class="fa fa-angle-down"></i></a> </sly>
+                        </sly>
+                     </sly>
+                  </div>
+                  <div class="topnav-mobi-sublinkssection">
+                     <ul class="topnav-mobi-sublinks" data-sly-list.menuItems="${tabItems.menuList}">
+                        <sly data-sly-test="${menuItems.menuItemLabel}">
+                           <sly data-sly-use.linkMenu="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =menuItems.menuItemLink}">
+                              <li><a href="${linkMenu.mappedUrl}" data-analytics-type="topnavlink" data-analytics-value="${tabItems.tabHeading}:${menuItems.menuItemLabel}">${menuItems.menuItemLabel}</a></li>
+                           </sly>
+                        </sly>
+                     </ul>
+                  </div>
+               </sly>
+            </div>
+            <!-- Mobile Accordion Content Ends -->
+         </div>
+         <!-- Mobile Accordion Display Ends -->
+      </section>
+      <!-- Mobile Accordion Ends -->
+   </sly>
+</sly>

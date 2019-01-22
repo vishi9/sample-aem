@@ -1,0 +1,29 @@
+<template data-sly-template.item="${@ list, item}">
+    <div data-sly-test="${item.image}" class="cmp-list__item-img">
+            <a href="${item.path}" class="h-bar" data-analytics-type="gridlist" data-analytics-value="${item.title}" >
+                  <figure class="rollover">
+                      <div class="box-photo">
+                      <sly data-sly-use.imageAltTextModel="${'com.adobe.aem.rmit.core.models.ImageAltTextModel' @ imagePath=item.image}">
+                      	<img src="${item.image}" alt="${imageAltTextModel.altText}"/>
+                      </sly>
+                      </div>
+                  </figure>
+            </a>
+    </div> 
+
+	<div class="cmp-list__item-content">
+			<a  data-analytics-type="gridlist" data-analytics-value="${item.title}" href="${item.path}" class="h-bar cmp-list__item-link" data-sly-unwrap="${!list.gridList}">
+				<h3>${item.title}</h3>
+			 </a>
+		   	<div class="tag-links">
+            	<sly data-sly-use.link="${'com.adobe.aem.rmit.core.MapUrlHelper' @ url =item.categoryTagUrl}" data-sly-unwrap >
+			 		<a data-analytics-type="gridlist" data-analytics-value="${item.categoryTag}:${item.title}"  data-sly-test="${item.categoryTag}" href="${link.mappedUrl}">${item.categoryTag}</a>
+                </sly>
+				<span data-sly-test="${item.articleDate}" class="date">${item.articleDate}</span>
+		  	</div>
+		  <p data-sly-test="${item.shortDescription}">
+			${item.shortDescription}
+		  </p>
+
+	</div>
+</template>
