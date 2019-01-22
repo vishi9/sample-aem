@@ -47,7 +47,7 @@
         <connection>scm:git:https://vishi9:Rmit2019@github.com/vishi9/sample-aem.git</connection>
         <url>https://github.com/vishi9/sample-aem.git</url>
 		<developerConnection>scm:git:@https://vishi9:Rmit2019@github.com/vishi9/sample-aem.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>am-rmit-1.1.1</tag>
 	</scm>
     <build>
         <plugins>
