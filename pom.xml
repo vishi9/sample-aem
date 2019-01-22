@@ -19,7 +19,7 @@
     <groupId>com.adobe.aem.rmit</groupId>
     <artifactId>aem-rmit</artifactId>
     <packaging>pom</packaging>
-    <version>1.1.1</version>
+    <version>1.1.1-SNAPSHOT</version>
     <description>RMIT Sites Project</description>
 
     <modules>
@@ -45,9 +45,10 @@
     </properties>
 	<scm>
         <connection>scm:git:https://vishi9:Rmit2019@github.com/vishi9/sample-aem.git</connection>
-        <developerConnection>scm:git:vishi9:Rmit2019@https://github.com/vishi9/sample-aem.git</developerConnection>
-        <tag>aem-rmit-1.1.1</tag>
-    </scm>
+        <url>https://github.com/vishi9/sample-aem.git</url>
+		<developerConnection>scm:git:vishi9:Rmit2019@https://github.com/vishi9/sample-aem.git</developerConnection>
+        <tag>HEAD</tag>
+	</scm>
     <build>
         <plugins>
             <!-- Maven Release Plugin -->
