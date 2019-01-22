@@ -323,6 +323,7 @@
                 <releaseRepository-Id>adobe-public-releases</releaseRepository-Id>
                 <releaseRepository-Name>Adobe Public Releases</releaseRepository-Name>
                 <releaseRepository-URL>https://repo.adobe.com/nexus/content/groups/public</releaseRepository-URL>
+				<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
             </properties>
 
             <repositories>
