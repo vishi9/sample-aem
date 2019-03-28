@@ -18,7 +18,7 @@ import com.adobe.granite.asset.api.Asset;
  * The Class TestMyDamUtils.
  */
 
-public class MyTestDamUtils extends BaseAbstractTest{
+public class TestMyDamUtils extends BaseAbstractTest{
 	/** The MyDamUtils. */
 	@InjectMocks
 	private MyDamUtils myDamUtils;
