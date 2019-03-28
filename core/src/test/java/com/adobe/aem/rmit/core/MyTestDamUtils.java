@@ -15,13 +15,13 @@ import com.adobe.aem.rmit.core.base.BaseAbstractTest;
 import com.adobe.granite.asset.api.Asset;
 
 /**
- * The Class TestDamUtils.
+ * The Class TestMyDamUtils.
  */
 
 public class MyTestDamUtils extends BaseAbstractTest{
-	/** The DamUtils. */
+	/** The MyDamUtils. */
 	@InjectMocks
-	private DamUtils damUtils;
+	private MyDamUtils myDamUtils;
 	
 	/** The resource resolver. */
 	@Mock
@@ -49,7 +49,7 @@ public class MyTestDamUtils extends BaseAbstractTest{
 	 */
 	@Test
 	public void testGetAltTextNull(){
-		Assert.assertNull(DamUtils.getAltText("/content/dam/rmit/feature-component-1-up.jpg",resourceResolver));
+		Assert.assertNull(MyDamUtils.getMyAltText("/content/dam/rmit/feature-component-1-up.jpg",resourceResolver));
 	}
 	/**
 	 * Test get AltText is not null.
@@ -59,7 +59,7 @@ public class MyTestDamUtils extends BaseAbstractTest{
 		Mockito.when(resourceResolver.getResource(Mockito.anyString())).thenReturn(mockResource);
 		Mockito.when(mockResource.adaptTo(ValueMap.class)).thenReturn(valueMap);
 		Mockito.when(valueMap.get(Mockito.anyString(), Mockito.any())).thenReturn("feature-component");
-		Assert.assertEquals("feature-component", DamUtils.getAltText("/content/dam/rmit/feature-component-1-up.jpg",resourceResolver));
+		Assert.assertEquals("feature-component", MyDamUtils.getMyAltText("/content/dam/rmit/feature-component-1-up.jpg",resourceResolver));
 	}
 	
 	/**
@@ -69,7 +69,7 @@ public class MyTestDamUtils extends BaseAbstractTest{
 	public void testGetAltTextImageNull(){
 		Mockito.when(resourceResolver.getResource(Mockito.anyString())).thenReturn(mockResource);
 		Mockito.when(mockResource.adaptTo(ValueMap.class)).thenReturn(valueMap);
-		String dcTitle = DamUtils.getAltText("/content/dam/rmit/feature-component-1-up.jpg",resourceResolver);
+		String dcTitle = MyDamUtils.getMyAltText("/content/dam/rmit/feature-component-1-up.jpg",resourceResolver);
 		Assert.assertNotNull(dcTitle);
 		Assert.assertTrue(dcTitle.isEmpty());
 	}
@@ -78,7 +78,7 @@ public class MyTestDamUtils extends BaseAbstractTest{
 	 */
 	@Test
 	public void testGetImageTitleNull(){
-		Assert.assertNull(DamUtils.getImageTitle("/content/dam/rmit/feature-component-1-up.jpg",resourceResolver));
+		Assert.assertNull(MyDamUtils.getMyImageTitle("/content/dam/rmit/feature-component-1-up.jpg",resourceResolver));
 	}
 	
 	/**
@@ -89,7 +89,7 @@ public class MyTestDamUtils extends BaseAbstractTest{
 		Mockito.when(resourceResolver.getResource(Mockito.anyString())).thenReturn(mockResource);
 		Mockito.when(mockResource.adaptTo(Asset.class)).thenReturn(asset);
 		Mockito.when(asset.getName()).thenReturn("feature-component");
-		Assert.assertEquals("feature-component",DamUtils.getImageTitle("/content/dam/rmit/feature-component-1-up.jpg",resourceResolver));
+		Assert.assertEquals("feature-component",MyDamUtils.getMyImageTitle("/content/dam/rmit/feature-component-1-up.jpg",resourceResolver));
 	}
 
 }

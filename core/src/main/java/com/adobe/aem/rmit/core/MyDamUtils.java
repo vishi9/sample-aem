@@ -12,7 +12,7 @@ public class MyDamUtils {
 		
 	}
 
-	public static String getAltText(String imagePath, ResourceResolver resourceResolver) {
+	public static String getMyAltText(String imagePath, ResourceResolver resourceResolver) {
 		String imageAltText = null;
 		if (StringUtils.isNotBlank(imagePath)) {
 			
@@ -24,7 +24,7 @@ public class MyDamUtils {
 							? imageMap.get("dc:alttag", String.class)
 							: "";
 					if (StringUtils.isBlank(imageAltText)) {
-						getImageTitle(imagePath, resourceResolver);
+						getMyImageTitle(imagePath, resourceResolver);
 					}
 				}
 			}
@@ -32,7 +32,7 @@ public class MyDamUtils {
 		return imageAltText;
 	}
 	
-	public static String getImageTitle(String imagePath, ResourceResolver resourceResolver) {
+	public static String getMyImageTitle(String imagePath, ResourceResolver resourceResolver) {
 		String imageName = null;
 		Resource jcrResource = resourceResolver.getResource(imagePath);
 		if (jcrResource != null) {
