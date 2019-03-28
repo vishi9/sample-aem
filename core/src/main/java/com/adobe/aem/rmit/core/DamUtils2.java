@@ -24,7 +24,7 @@ public class DamUtils2 {
 							? imageMap.get("dc:alttag", String.class)
 							: "";
 					if (StringUtils.isBlank(imageAltText)) {
-						getImageTitle(imagePath, resourceResolver);
+						getImageTitle2(imagePath, resourceResolver);
 					}
 				}
 			}
