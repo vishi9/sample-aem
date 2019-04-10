@@ -11,5 +11,10 @@ pipeline {
         sh 'mvn clean test'
       }
     }
+    stage('Deploy') {
+      steps {
+        build 'AEM Deploy and Cache Invalidation'
+      }
+    }
   }
 }
